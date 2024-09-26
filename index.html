@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="Asset/loggo.png" \type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Indozons</title>
+    <style>
+        .montserrat {
+            font-family: Montserrat;
+        }
+
+        .baloo {
+            font-family: 'Baloo Bhai 2';
+        }
+        .work-sans {
+            font-family: 'Work Sans';
+        }
+        .hidden {
+        display: none;
+        }
+
+        .active {
+            background-color: #236975;
+            color: white;
+            border: none;
+        }
+
+        .pilihan-kendaraan button {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+
+        .image-pembuka {
+            background-image: url('Asset/foto2.png');
+        }
+
+        .gambar1 {
+            background-image: url('Asset/gambar1.png');
+        }
+
+        .gambar2 {
+            background-image: url('Asset/gambar2.png');
+        }
+
+        .gambar3 {
+            background-image: url('Asset/gambar3.png');
+        }
+
+        .gambar4 {
+            background-image: url('Asset/gambar4.png');
+        }
+
+        .gambar5 {
+            background-image: url('Asset/gambar5.png');
+        }
+
+        .gambar6 {
+            background-image: url("Asset/gambar6.png");
+        }
+
+        .gambar7 {
+            background-image: url("Asset/gambar7.png");
+        }
+
+        .gambar8 {
+            background-image: url("Asset/gambar8.png");
+        }
+
+        .gambar9 {
+            background-image: url("Asset/gambar9.png");
+        }
+
+        .gambar10 {
+            background-image: url("Asset/gambar10.png");
+        }
+
+        .gambar11 {
+            background-image: url("Asset/gambar11.png");
+        }
+
+        .gambar12 {
+            background-image: url("Asset/gambar12.png");
+        }
+        .gambar16 {
+            background-image: url("Asset/gambar16.png");
+        }
+        .gambar25 {
+            background-image: url("Asset/gambar25.png");
+        }
+        .navbar-hidden {
+         transform: translateY(-100%);
+        }
+        html{
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            padding: 0;
+            margin: 0;
+        }
+        
+    </style>
+</head>
+
+<body class="work-sans overflow-x-hidden ">
+    
+    <nav id="navbar" class="navbar w-full z-50 h-28 flex flex-col transition-transform duration-300 justify-center items-center mx-auto bg-white">
+        <div class="w-[85%] bg-white">
+            <div class="flex items-center justify-between">
+                <!-- Mobile menu button (moved to the left side of the logo) -->
+                <div class="flex min-[930px]:hidden order-1">
+                    <button id="menu-button" class="focus:outline-none">
+                        <i class="fa-solid fa-bars text-[20px]"></i>
+                    </button>
+                </div>
+                
+                <!-- Logo -->
+                <a href="index.html" class="logo flex flex-row order-2 mx-auto min-[930px]:mr-4">
+                    <img class="w-40 min-[930px]:w-52" src="Asset/logoIndozons.png" alt="Logo Indozons">
+                </a>
+                
+                <!-- Profile Icon (moved to the right side of the logo) -->
+                <div class="flex order-3 min-[930px]:order-none min-[930px]:hidden">
+                    <i class="ph ph-user-circle text-center text-[35px] 2xl:text-[41px] min-[930px]:ml-5"></i>
+                </div>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden min-[930px]:flex flex-row w-full items-center justify-end order-4">
+                    <ul class="flex gap-4 sm:gap-8 mr-4 sm:mr-12 pt-1 montserrat font-medium text-[13px] sm:text-[15px]">
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#destin">Destination</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#article">Tips</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#review">Review</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Bookings</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Saved</a></li>
+                    </ul>
+                    <button class="internasional flex items-center">
+                        <i class="fa-solid fa-globe text-[19px] xl:text-[20px] flex pr-2"></i>
+                        <div class="border-l-2 border-[#171717] h-5 xl:h-7"></div>
+                        <p class="font-medium text-base xl:text-xl pl-2">IDR</p>
+                    </button>
+                    <i class="ph ph-user-circle text-center text-[35px] 2xl:text-[41px] ml-5"></i>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden min-[930px]:hidden absolute top-0 left-0 w-full bg-white z-50 shadow-lg mt-2">
+                <ul class="flex flex-col gap-5 mb-5 montserrat font-medium text-[15px] pl-10 p-4">
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#destin">Destination</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#article">Tips</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#review">Review</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Bookings</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Saved</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="hero flex justify-center items-center flex-col">
+        <div class="homepage w-[85%] | flex justify-center items-center">
+            <div class="pembuka w-full bg-cover bg-center h-[40rem] min-[1180px]:h-[35em]  rounded-2xl image-pembuka | flex flex-col justify-center items-center ">
+                <h1 class="text-white montserrat font-bold text-center mt-1 xl:mt-16 text-xl min-[370px]:text-2xl min-[700px]:text-3xl lg:text-4xl xl:text-5xl">Discover the Beauty of Indonesia.</h1>
+                <p class="text-white text-base md:text-xl lg:text-2xl mb-12 mt-4 md:mt-10">With <span class="baloo text-base md:text-xl lg:text-2xl text-white font-bold">Indozons</span></p>
+                <div class="service-card w-[90%] bottom-64">
+                    <div class="card w-full h-[400px] min-[1180px]:h-56 bg-white rounded-2xl shadow-xl | flex flex-col justify-start pt-5 md:pt-0  md:justify-center">
+                        <div class="pilihan-kendaraan overflow-x-auto flex justify-start xl:justify-center w-[90%] xl:w-full mx-auto">
+        
+                            <ul class="menu-list flex flex-row py-2 gap-3  2xl:gap-5 font-medium whitespace-nowrap">
+                                    <li class="flex">
+                                        <button data-item="item1" class="text-sm min-[1280px]:text-base 2xl:text-lg items-center border-0 hover:outline hover:outline-2 p-2 px-3 rounded-xl border-[#171717] flex flex-row-reverse active">
+                                            Flights
+                                            <div class="flex items-center w-7 mr-2">
+                                                <i class="ph ph-airplane-tilt text-xl"></i>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="flex">
+                                        <button data-item="item2" class="text-sm min-[1280px]:text-base 2xl:text-lg items-center border-0 hover:outline hover:outline-2 p-2 px-3 border-[#171717] rounded-xl flex flex-row-reverse">
+                                            Hotels
+                                            <div class="flex items-center w-6 mr-2">
+                                                <i class="ph ph-bed text-xl"></i>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="flex">
+                                        <button data-item="item3" class="text-sm min-[1280px]:text-base 2xl:text-lg items-center hover:outline hover:outline-2 p-2 px-3 border-[#171717] rounded-xl flex flex-row-reverse">
+                                            Trains
+                                            <div class="flex items-center w-5 mr-2 text-xl">
+                                                <i class="ph ph-train"></i>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="flex">
+                                        <button data-item="item4" class="text-sm min-[1280px]:text-base 2xl:text-lg items-center hover:outline hover:outline-2 p-2 px-3 border-[#171717] rounded-xl flex flex-row-reverse">
+                                            Bus & Travel
+                                            <div class="flex items-center w-6 mr-2 text-xl">
+                                                <i class="ph ph-bus"></i>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="flex">
+                                        <button data-item="item5" class="text-sm min-[1280px]:text-base 2xl:text-lg items-center hover:outline hover:outline-2 p-2 px-3 border-[#171717] rounded-xl flex flex-row-reverse">
+                                            Car Rental
+                                            <div class="flex items-center w-6 mr-2 text-xl">
+                                                <i class="ph ph-car"></i>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="flex">
+                                        <button data-item="item6" class="text-sm min-[1280px]:text-base 2xl:text-lg items-center hover:outline hover:outline-2 p-2 px-3 border-[#171717] rounded-xl flex flex-row-reverse">
+                                            Airport Transfer
+                                            <div class="flex items-center w-5 mr-2 text-xl">
+                                                <i class="ph ph-air-traffic-control"></i>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="flex">
+                                        <button data-item="item7" class="text-sm min-[1280px]:text-base 2xl:text-lg items-center h-full hover:outline hover:outline-2 p-2 px-3 border-[#171717] rounded-xl flex flex-row-reverse">
+                                            More
+                                            <div class="flex items-center w-6 mr-2 text-2xl">
+                                                <i class="ph ph-squares-four"></i>
+                                            </div>
+                                        </button>
+                                    </li>
+                            </ul>
+                            
+                           
+                        </div>
+                        <hr id="trigger" class="border-t-[3px] border-[#171717] w-[90%] md:w-[93%] min-[1355px]:w-[89%] min-[1528px]:w-[92%] mx-auto mt-4 mb-7" />
+                            <div class="card-aksi">
+                                <div id="item1" class="content ">
+                                    <div class="card-flight flex flex-col min-[1180px]:flex-row justify-center mr-0 min-[1180px]:mr-14 ">
+                                        <div class="take-off relative flex justify-center mr-0 min-[1180px]:mr-2 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[205px] min-[1250px]:w-[220px] 2xl:w-[270px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="From:" list="browsers" />
+                                            <i class="ph ph-airplane-takeoff text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="landing relative flex justify-center mt-2 min-[1180px]:mt-0 mr-0 min-[1180px]:mr-5 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[205px] min-[1250px]:w-[220px] 2xl:w-[270px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="To:" list="browsers" />
+                                            <i class="ph ph-airplane-landing text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="penggabung flex justify-center mt-5 min-[1180px]:mt-0">
+                                            <div class=" calendar w-[63%] mr-3 min-[935px]:mr-5 min-[1180px]:mr-0 relative flex justify-center ">
+                                                <input type="date"
+                                                    class="pl-[47px] 2xl:pl-[60px] w-full min-[1180px]:w-[180px] min-[1250px]:w-[190px] 2xl:w-[210px] pr-4 py-1 text-xs min-[360px]:text-sm 2xl:text-base border-2 border-[#171717] hover:border-[#236975]  focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                    placeholder="To:" />
+                                                <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                                    <i class="ph ph-calendar-dots text-[#236975] text-2xl 2xl:text-3xl"></i>
+                                                </div>
+                                            </div>
+                                            <div class=" wisatawan w-[25%] min-[1180px]:w-[40%] relative flex justify-center  mx-0 min-[1180px]:mx-5"> 
+                                                <button class="flex justify-center items-center w-full min-[1180px]:w-[165px] p-2 text-base border-2 border-[#171717]  rounded-3xl" onclick="toggleDropdown('dropdownMenuBottom')">
+                                                    <i class="ph ph-user text-[#236975] text-2xl 2xl:text-3xl mr-2 min-[1270px]:mr-3"></i>
+                                                    <p class="text-base flex min-[1180px]:block flex-row min-[1180px]:text-sm 2xl:text-base font-medium">
+                                                        1  
+                                                        <span class="hidden min-[780px]:inline ml-2 min-[1180px]:ml-0">Wisatawan</span>
+                                                    </p>
+                                                </button>
+                                                <div id="dropdownMenuBottom" class="hidden p-8 origin-bottom absolute right-0 mt-16 w-64 min-[410px]:w-80 min-[500px]:w-96 rounded-md shadow-lg bg-white ring-1  ring-black ring-opacity-5">
+                                                <ul class="space-y-5">
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-base min-[400px]:text-xl">Dewasa</h1>
+                                                            <p class="text-sm">18-64 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-lg min-[400px]:text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput" type="number" 
+                                                            class=" w-[57px] h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-lg min-[400px]:text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-base min-[400px]:text-xl">Anak-Anak</h1>
+                                                            <p class="text-sm">2-11 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn2" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-lg min-[400px]:text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput2" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn2" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-lg min-[400px]:text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-base min-[400px]:text-xl">Bayi</h1>
+                                                            <p class="text-sm">Di bawah 2 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn3" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-lg min-[400px]:text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput3" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn3" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-lg min-[400px]:text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="area-button w-full flex justify-end">
+                                                    <button id="selesai" class="w-full p-2 bg-[#236975] hover:bg-[#45838E] rounded-xl mt-8">
+                                                        <h1 class="font-semibold text-lg text-white">Selesai</h1>
+                                                    </button>
+                                                </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search w-full flex min-[1180px]:block justify-center min-[1180px]:w-0 mt-5 min-[1180px]:mt-0">
+                                            <button class=" w-[90%] min-[1180px]:w-[60px] h-[45px] min-[1180px]:h-[55px] bg-[#236975] hover:bg-[#45838E] rounded-2xl flex items-center justify-center">
+                                                <!-- Ikon akan disembunyikan pada layar 1180px ke atas -->
+                                                <i class="ph ph-magnifying-glass text-white text-lg 2xl:text-xl hidden min-[1180px]:inline"></i>
+                                                <!-- Teks "Search" akan muncul pada layar 1180px ke atas -->
+                                                <span class=" min-[1180px]:hidden text-white text-base 2xl:text-lg">Search</span>
+                                            </button>
+                                        </div>
+                                    
+                    
+                                        <datalist id="browsers">
+                                            <option value="Jakarta(JKT)">
+                                            <option value="Jambi(CGK)">
+                                            <option value="Denpasar(DPS)">
+                                            <option value="Semarang(SRG)">
+                                            <option value="Aceh(BPN)">
+                                            <option value="Papua(DJJ)">
+                                            <option value="Yogyakarta(YIA)"></option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div id="item2" class="content hidden">
+                                    <div class="card-hotel flex flex-col min-[1180px]:flex-row justify-center mr-0 min-[1180px]:mr-14 ">
+                                        <div class="take-off relative flex justify-center mr-0 min-[1180px]:mr-2 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[350px] min-[1250px]:w-[430px] 2xl:w-[550px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="City,hotel,place to go" list="browsers" />
+                                            <i class="ph ph-map-pin text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="penggabung flex justify-center mt-5 min-[1180px]:mt-0">
+                                            <div class=" calendar w-[63%] mr-3 min-[935px]:mr-5 min-[1180px]:mr-0 relative flex justify-center ">
+                                                <input type="date"
+                                                    class="pl-[47px] 2xl:pl-[60px] w-full min-[1180px]:w-[180px] min-[1250px]:w-[190px] 2xl:w-[210px] pr-4 py-1 text-xs min-[360px]:text-sm 2xl:text-base border-2 border-[#171717] hover:border-[#236975]  focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                    placeholder="To:" />
+                                                <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                                    <i class="ph ph-calendar-dots text-[#236975] text-2xl 2xl:text-3xl"></i>
+                                                </div>
+                                            </div>
+                                            <div class=" wisatawan w-[25%] min-[1180px]:w-[40%] relative flex justify-center  mx-0 min-[1180px]:mx-5"> 
+                                                <button class="flex justify-center items-center w-full min-[1180px]:w-[165px] p-2 text-base border-2 border-[#171717]  rounded-3xl" onclick="toggleDropdown('dropdownMenuBottom')">
+                                                    <i class="ph ph-user text-[#236975] text-2xl 2xl:text-3xl mr-2 min-[1270px]:mr-3"></i>
+                                                    <p class="text-base flex min-[1180px]:block flex-row min-[1180px]:text-sm 2xl:text-base font-medium">
+                                                        1  
+                                                        <span class="hidden min-[780px]:inline ml-2 min-[1180px]:ml-0">Wisatawan</span>
+                                                    </p>
+                                                </button>
+                                                <div id="dropdownMenuBottom2" class="hidden p-8 origin-bottom absolute right-0 mt-16 w-96 rounded-md shadow-lg bg-white ring-1  ring-black ring-opacity-5">
+                                                <ul class="space-y-5">
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Dewasa</h1>
+                                                            <p class="text-sm">18-64 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn4" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput4" type="number" 
+                                                            class=" w-[57px] h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn4" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Anak-Anak</h1>
+                                                            <p class="text-sm">2-11 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn5" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput5" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn5" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Bayi</h1>
+                                                            <p class="text-sm">Di bawah 2 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn6" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput6" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn6" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="area-button w-full flex justify-end">
+                                                    <button id="selesai2" class="w-full p-2 bg-[#236975] hover:bg-[#45838E] rounded-xl mt-8">
+                                                        <h1 class="font-semibold text-lg text-white">Selesai</h1>
+                                                    </button>
+                                                </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search w-full flex min-[1180px]:block justify-center min-[1180px]:w-0 mt-5 min-[1180px]:mt-0">
+                                            <button class=" w-[90%] min-[1180px]:w-[60px] h-[45px] min-[1180px]:h-[55px] bg-[#236975] hover:bg-[#45838E] rounded-2xl flex items-center justify-center">
+                                                <!-- Ikon akan disembunyikan pada layar 1180px ke atas -->
+                                                <i class="ph ph-magnifying-glass text-white text-lg 2xl:text-xl hidden min-[1180px]:inline"></i>
+                                                <!-- Teks "Search" akan muncul pada layar 1180px ke atas -->
+                                                <span class=" min-[1180px]:hidden text-white text-base 2xl:text-lg">Search</span>
+                                            </button>
+                                        </div>
+                                    
+                    
+                                        <datalist id="browsers">
+                                            <option value="Jakarta(JKT)">
+                                            <option value="Jambi(CGK)">
+                                            <option value="Denpasar(DPS)">
+                                            <option value="Semarang(SRG)">
+                                            <option value="Aceh(BPN)">
+                                            <option value="Papua(DJJ)">
+                                            <option value="Yogyakarta(YIA)"></option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div id="item3" class="content hidden">
+                                    <div class="card-train flex flex-col min-[1180px]:flex-row justify-center mr-0 min-[1180px]:mr-14 ">
+                                        <div class="take-off relative flex justify-center mr-0 min-[1180px]:mr-2 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[205px] min-[1250px]:w-[220px] 2xl:w-[270px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="Origin" list="browsers" />
+                                            <i class="ph ph-train text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="landing relative flex justify-center mt-2 min-[1180px]:mt-0 mr-0 min-[1180px]:mr-5 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[205px] min-[1250px]:w-[220px] 2xl:w-[270px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="Destination" list="browsers" />
+                                            <i class="ph ph-subway text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="penggabung flex justify-center mt-5 min-[1180px]:mt-0">
+                                            <div class=" calendar w-[63%] mr-3 min-[935px]:mr-5 min-[1180px]:mr-0 relative flex justify-center ">
+                                                <input type="date"
+                                                    class="pl-[47px] 2xl:pl-[60px] w-full min-[1180px]:w-[180px] min-[1250px]:w-[190px] 2xl:w-[210px] pr-4 py-1 text-xs min-[360px]:text-sm 2xl:text-base border-2 border-[#171717] hover:border-[#236975]  focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                    placeholder="To:" />
+                                                <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                                    <i class="ph ph-calendar-dots text-[#236975] text-2xl 2xl:text-3xl"></i>
+                                                </div>
+                                            </div>
+                                            <div class=" wisatawan w-[25%] min-[1180px]:w-[40%] relative flex justify-center  mx-0 min-[1180px]:mx-5"> 
+                                                <button class="flex justify-center items-center w-full min-[1180px]:w-[165px] p-2 text-base border-2 border-[#171717]  rounded-3xl" onclick="toggleDropdown('dropdownMenuBottom')">
+                                                    <i class="ph ph-user text-[#236975] text-2xl 2xl:text-3xl mr-2 min-[1270px]:mr-3"></i>
+                                                    <p class="text-base flex min-[1180px]:block flex-row min-[1180px]:text-sm 2xl:text-base font-medium">
+                                                        1  
+                                                        <span class="hidden min-[780px]:inline ml-2 min-[1180px]:ml-0">Wisatawan</span>
+                                                    </p>
+                                                </button>
+                                                <div id="dropdownMenuBottom" class="hidden p-8 origin-bottom absolute right-0 mt-16 w-96 rounded-md shadow-lg bg-white ring-1  ring-black ring-opacity-5">
+                                                <ul class="space-y-5">
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Dewasa</h1>
+                                                            <p class="text-sm">18-64 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput" type="number" 
+                                                            class=" w-[57px] h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Anak-Anak</h1>
+                                                            <p class="text-sm">2-11 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn2" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput2" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn2" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Bayi</h1>
+                                                            <p class="text-sm">Di bawah 2 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn3" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput3" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn3" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="area-button w-full flex justify-end">
+                                                    <button id="selesai" class="w-full p-2 bg-[#236975] hover:bg-[#45838E] rounded-xl mt-8">
+                                                        <h1 class="font-semibold text-lg text-white">Selesai</h1>
+                                                    </button>
+                                                </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search w-full flex min-[1180px]:block justify-center min-[1180px]:w-0 mt-5 min-[1180px]:mt-0">
+                                            <button class=" w-[90%] min-[1180px]:w-[60px] h-[45px] min-[1180px]:h-[55px] bg-[#236975] hover:bg-[#45838E] rounded-2xl flex items-center justify-center">
+                                                <!-- Ikon akan disembunyikan pada layar 1180px ke atas -->
+                                                <i class="ph ph-magnifying-glass text-white text-lg 2xl:text-xl hidden min-[1180px]:inline"></i>
+                                                <!-- Teks "Search" akan muncul pada layar 1180px ke atas -->
+                                                <span class=" min-[1180px]:hidden text-white text-base 2xl:text-lg">Search</span>
+                                            </button>
+                                        </div>
+                                    
+                    
+                                        <datalist id="browsers">
+                                            <option value="Jakarta(JKT)">
+                                            <option value="Jambi(CGK)">
+                                            <option value="Denpasar(DPS)">
+                                            <option value="Semarang(SRG)">
+                                            <option value="Aceh(BPN)">
+                                            <option value="Papua(DJJ)">
+                                            <option value="Yogyakarta(YIA)"></option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div id="item4" class="content hidden">
+                                    <div class="card-flight flex flex-col min-[1180px]:flex-row justify-center mr-0 min-[1180px]:mr-14 ">
+                                        <div class="take-off relative flex justify-center mr-0 min-[1180px]:mr-2 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[205px] min-[1250px]:w-[220px] 2xl:w-[270px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="From:" list="browsers" />
+                                            <i class="ph ph-van text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="landing relative flex justify-center mt-2 min-[1180px]:mt-0 mr-0 min-[1180px]:mr-5 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[205px] min-[1250px]:w-[220px] 2xl:w-[270px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="To:" list="browsers" />
+                                            <i class="ph ph-van -scale-x-100 text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="penggabung flex justify-center mt-5 min-[1180px]:mt-0">
+                                            <div class=" calendar w-[63%] mr-3 min-[935px]:mr-5 min-[1180px]:mr-0 relative flex justify-center ">
+                                                <input type="date"
+                                                    class="pl-[47px] 2xl:pl-[60px] w-full min-[1180px]:w-[180px] min-[1250px]:w-[190px] 2xl:w-[210px] pr-4 py-1 text-xs min-[360px]:text-sm 2xl:text-base border-2 border-[#171717] hover:border-[#236975]  focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                    placeholder="To:" />
+                                                <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                                    <i class="ph ph-calendar-dots text-[#236975] text-2xl 2xl:text-3xl"></i>
+                                                </div>
+                                            </div>
+                                            <div class=" wisatawan w-[25%] min-[1180px]:w-[40%] relative flex justify-center  mx-0 min-[1180px]:mx-5"> 
+                                                <button class="flex justify-center items-center w-full min-[1180px]:w-[165px] p-2 text-base border-2 border-[#171717]  rounded-3xl" onclick="toggleDropdown('dropdownMenuBottom')">
+                                                    <i class="ph ph-user text-[#236975] text-2xl 2xl:text-3xl mr-2 min-[1270px]:mr-3"></i>
+                                                    <p class="text-base flex min-[1180px]:block flex-row min-[1180px]:text-sm 2xl:text-base font-medium">
+                                                        1  
+                                                        <span class="hidden min-[780px]:inline ml-2 min-[1180px]:ml-0">Wisatawan</span>
+                                                    </p>
+                                                </button>
+                                                <div id="dropdownMenuBottom" class="hidden p-8 origin-bottom absolute right-0 mt-16 w-96 rounded-md shadow-lg bg-white ring-1  ring-black ring-opacity-5">
+                                                <ul class="space-y-5">
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Dewasa</h1>
+                                                            <p class="text-sm">18-64 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput" type="number" 
+                                                            class=" w-[57px] h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Anak-Anak</h1>
+                                                            <p class="text-sm">2-11 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn2" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput2" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn2" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Bayi</h1>
+                                                            <p class="text-sm">Di bawah 2 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn3" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput3" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn3" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="area-button w-full flex justify-end">
+                                                    <button id="selesai" class="w-full p-2 bg-[#236975] hover:bg-[#45838E] rounded-xl mt-8">
+                                                        <h1 class="font-semibold text-lg text-white">Selesai</h1>
+                                                    </button>
+                                                </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search w-full flex min-[1180px]:block justify-center min-[1180px]:w-0 mt-5 min-[1180px]:mt-0">
+                                            <button class=" w-[90%] min-[1180px]:w-[60px] h-[45px] min-[1180px]:h-[55px] bg-[#236975] hover:bg-[#45838E] rounded-2xl flex items-center justify-center">
+                                                <!-- Ikon akan disembunyikan pada layar 1180px ke atas -->
+                                                <i class="ph ph-magnifying-glass text-white text-lg 2xl:text-xl hidden min-[1180px]:inline"></i>
+                                                <!-- Teks "Search" akan muncul pada layar 1180px ke atas -->
+                                                <span class=" min-[1180px]:hidden text-white text-base 2xl:text-lg">Search</span>
+                                            </button>
+                                        </div>
+                                    
+                    
+                                        <datalist id="browsers">
+                                            <option value="Jakarta(JKT)">
+                                            <option value="Jambi(CGK)">
+                                            <option value="Denpasar(DPS)">
+                                            <option value="Semarang(SRG)">
+                                            <option value="Aceh(BPN)">
+                                            <option value="Papua(DJJ)">
+                                            <option value="Yogyakarta(YIA)"></option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div id="item5" class="content hidden">
+                                    <div class="card-car flex flex-col min-[1180px]:flex-row justify-center mr-0 min-[1180px]:mr-14 ">
+                                        <div class="take-off relative flex justify-center mr-0 min-[1180px]:mr-2 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-sm min-[420px]:text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[350px] min-[1250px]:w-[430px] 2xl:w-[550px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="Enter City or Region " list="browsers" />
+                                            <i class="ph ph-map-pin text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="penggabung flex justify-center mt-5 min-[1180px]:mt-0">
+                                            <div class=" calendar w-[59%] min-[560px]:w-[61%] mr-3 min-[935px]:mr-5 min-[1180px]:mr-0  relative flex justify-center ">
+                                                <input type="date"
+                                                    class="pl-[47px] 2xl:pl-[60px]  w-full min-[1180px]:w-[180px] min-[1250px]:w-[190px] 2xl:w-[210px] pr-4 py-3     text-xs min-[360px]:text-sm 2xl:text-base border-2 border-[#171717] hover:border-[#236975]  focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                    placeholder="To:" />
+                                                <div class="absolute inset-y-0 left-0 pl-4 min-[1180px]:pl-8 flex items-center pointer-events-none">
+                                                    <i class="ph ph-calendar-dots text-[#236975] text-2xl 2xl:text-3xl"></i>
+                                                </div>
+                                            </div>
+                                            <div class=" jam w-[25%] min-[1180px]:w-[40%] relative flex justify-center ml-2 mr-0 min-[1180px]:mr-5"> 
+                                                <input type="time"
+                                                    class="pl-[47px] 2xl:pl-[60px] w-full min-[1180px]:w-[180px] min-[1250px]:w-[190px] 2xl:w-[210px] pr-4 py-1 text-xs min-[360px]:text-sm 2xl:text-base border-2 border-[#171717] hover:border-[#236975]  focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                    placeholder="To:" />
+                                                <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                                    <i class="ph ph-clock text-[#236975] text-2xl 2xl:text-3xl"></i>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="search w-full flex min-[1180px]:block justify-center min-[1180px]:w-0 mt-5 min-[1180px]:mt-0">
+                                            <button class=" w-[90%] min-[1180px]:w-[60px] h-[45px] min-[1180px]:h-[55px] bg-[#236975] hover:bg-[#45838E] rounded-2xl flex items-center justify-center">
+                                                <!-- Ikon akan disembunyikan pada layar 1180px ke atas -->
+                                                <i class="ph ph-magnifying-glass text-white text-lg 2xl:text-xl hidden min-[1180px]:inline"></i>
+                                                <!-- Teks "Search" akan muncul pada layar 1180px ke atas -->
+                                                <span class=" min-[1180px]:hidden text-white text-base 2xl:text-lg">Search</span>
+                                            </button>
+                                        </div>
+                                    
+                    
+                                        <datalist id="browsers">
+                                            <option value="Jakarta(JKT)">
+                                            <option value="Jambi(CGK)">
+                                            <option value="Denpasar(DPS)">
+                                            <option value="Semarang(SRG)">
+                                            <option value="Aceh(BPN)">
+                                            <option value="Papua(DJJ)">
+                                            <option value="Yogyakarta(YIA)"></option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div id="item6" class="content hidden">
+                                    <div class="card-airport flex flex-col min-[1180px]:flex-row justify-center mr-0 min-[1180px]:mr-14 ">
+                                        <div class="take-off relative flex justify-center mr-0 min-[1180px]:mr-2 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[205px] min-[1250px]:w-[220px] 2xl:w-[270px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="From:" list="browsers" />
+                                            <i class="ph ph-airplane-takeoff text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="landing relative flex justify-center mt-2 min-[1180px]:mt-0 mr-0 min-[1180px]:mr-5 2xl:mr-3">
+                                            <input type="text"
+                                                class="pl-[55px] 2xl:pl-[60px] text-base min-[1180px]:text-sm 2xl:text-base py-3 w-[90%] min-[1180px]:w-[205px] min-[1250px]:w-[220px] 2xl:w-[270px]  border-2 border-[#171717] hover:border-[#236975] focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                placeholder="To:" list="browsers" />
+                                            <i class="ph ph-map-pin -scale-x-100 text-[#236975] text-2xl 2xl:text-3xl absolute top-1/2 left-8 min-[470px]:left-10 min-[625px]:left-12 min-[980px]:left-16 min-[1180px]:left-5 transform -translate-y-1/2"></i>
+                                        </div>
+                                        <div class="penggabung flex justify-center mt-5 min-[1180px]:mt-0">
+                                            <div class=" calendar w-[63%] mr-3 min-[935px]:mr-5 min-[1180px]:mr-0  relative flex justify-center ">
+                                                <input type="date"
+                                                    class="pl-[47px] 2xl:pl-[60px]  w-full min-[1180px]:w-[180px] min-[1250px]:w-[190px] 2xl:w-[210px] pr-4 py-3     text-xs min-[360px]:text-sm 2xl:text-base border-2 border-[#171717] hover:border-[#236975]  focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                    placeholder="To:" />
+                                                <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                                    <i class="ph ph-calendar-dots text-[#236975] text-2xl 2xl:text-3xl"></i>
+                                                </div>
+                                            </div>
+                                            <div class=" jam w-[25%] min-[1180px]:w-[40%] relative flex justify-center mx-0 min-[1180px]:mx-5"> 
+                                                <input type="time"
+                                                    class="pl-[47px] 2xl:pl-[60px] w-full min-[1180px]:w-[180px] min-[1250px]:w-[190px] 2xl:w-[210px] pr-4 py-1 text-xs min-[360px]:text-sm 2xl:text-base border-2 border-[#171717] hover:border-[#236975]  focus:border-[#236975] focus:ring focus:ring-[#CCECF6] focus:outline-none rounded-3xl"
+                                                    placeholder="To:" />
+                                                <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                                    <i class="ph ph-clock text-[#236975] text-2xl 2xl:text-3xl"></i>
+                                                </div>
+                                                <div id="dropdownMenuBottom" class="hidden p-8 origin-bottom absolute right-0 mt-16 w-96 rounded-md shadow-lg bg-white ring-1  ring-black ring-opacity-5">
+                                                <ul class="space-y-5">
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Dewasa</h1>
+                                                            <p class="text-sm">18-64 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput" type="number" 
+                                                            class=" w-[57px] h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Anak-Anak</h1>
+                                                            <p class="text-sm">2-11 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn2" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput2" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn2" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="w-full flex flex-row"> 
+                                                        <div class="text-area w-1/2">
+                                                            <h1 class="font-semibold text-xl">Bayi</h1>
+                                                            <p class="text-sm">Di bawah 2 tahun</p>
+                                                        </div>
+                                                        <div class="button-area w-1/2 flex justify-center items-center">
+                                                            <button id="decrementBtn3" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-minus text-white text-xl"></i>
+                                                            </button>
+                                                            <input id="numberInput3" type="number" 
+                                                            class=" w-14 h-8 pl-[23px] text-lg  focus:outline-none rounded-md" value="0" readonly/>
+                                                            <button id="incrementBtn3" class="bg-[#236975] w-8 h-8 rounded-full ">
+                                                                <i class="ph ph-plus text-white text-xl"></i>
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="area-button w-full flex justify-end">
+                                                    <button id="selesai" class="w-full p-2 bg-[#236975] hover:bg-[#45838E] rounded-xl mt-8">
+                                                        <h1 class="font-semibold text-lg text-white">Selesai</h1>
+                                                    </button>
+                                                </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search w-full flex min-[1180px]:block justify-center min-[1180px]:w-0 mt-5 min-[1180px]:mt-0">
+                                            <button class=" w-[90%] min-[1180px]:w-[60px] h-[45px] min-[1180px]:h-[55px] bg-[#236975] hover:bg-[#45838E] rounded-2xl flex items-center justify-center">
+                                                <!-- Ikon akan disembunyikan pada layar 1180px ke atas -->
+                                                <i class="ph ph-magnifying-glass text-white text-lg 2xl:text-xl hidden min-[1180px]:inline"></i>
+                                                <!-- Teks "Search" akan muncul pada layar 1180px ke atas -->
+                                                <span class=" min-[1180px]:hidden text-white text-base 2xl:text-lg">Search</span>
+                                            </button>
+                                        </div>
+                                    
+                    
+                                        <datalist id="browsers">
+                                            <option value="Jakarta(JKT)">
+                                            <option value="Jambi(CGK)">
+                                            <option value="Denpasar(DPS)">
+                                            <option value="Semarang(SRG)">
+                                            <option value="Aceh(BPN)">
+                                            <option value="Papua(DJJ)">
+                                            <option value="Yogyakarta(YIA)"></option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div id="item7" class="content hidden">
+                                <div class="flex justify-center items-center">
+                                    <h1>Coming Soon</h1>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        <div class="popular-page w-[85%] mt-16 min-[950px]:mt-28  flex flex-col justify-center items-center">
+    <div class="w-[90%]">
+        <h1 class="font-semibold text-2xl min-[460px]:text-3xl min-[780px]:text-4xl mb-7 min-[780px]:mb-10 min-[1270px]::mb-14">Popular Destination</h1>
+    </div>
+    <div class="container w-[90%] min-[780px]:block overflow-x-auto flex whitespace-nowrap ">
+        <div class="card-destination-up flex min-[780px]:grid gap-5 min-[520px]:gap-8 min-[900px]:gap-10 min-[1600px]:gap-10 grid-cols-1 min-[730px]:grid-cols-2  min-[1270px]:grid-cols-3 mx-auto font-semibold text-white">
+            <a href="labuan-bajo.html" class="card1 opacity-100 hover:opacity-85 w-[280px] min-[435px]:w-[330px] min-[530px]:w-[400px] min-[780px]:w-[100%] h-[235px] min-[780px]:h-[280px] min-[900px]:h-[330px] min-[1270px]:h-[290px] min-[1400px]:h-[350px] min-[1600px]:h-[350px] bg-slate-500 rounded-xl gambar3 bg-cover flex items-end justify-start">
+                <h1 class="pl-4 sm:pl-5 lg:pl-7 pb-4 sm:pb-5 lg:pb-6 text-2xl min-[580px]:text-3xl min-[1178px]:text-4xl min-[1270px]:text-3xl min-[1600px]:text-4xl">Labuan Bajo</h1>
+            </a>
+            <a href="pura-ulun.html" class="card2 opacity-100 hover:opacity-85 w-[280px] min-[435px]:w-[330px] min-[530px]:w-[400px] min-[780px]:w-[100%] h-[235px] min-[780px]:h-[280px] min-[900px]:h-[330px] min-[1270px]:h-[290px] min-[1400px]:h-[350px] min-[1600px]:h-[350px] bg-slate-500 rounded-xl gambar2 bg-cover flex items-end justify-start">
+                <h1 class="pl-4 sm:pl-5 lg:pl-7 pb-4 sm:pb-5 lg:pb-6 text-2xl min-[580px]:text-3xl min-[1178px]:text-4xl min-[1270px]:text-3xl min-[1600px]:text-4xl text-start">Pura Ulun<br>Danu</h1>
+            </a>
+            <a href="bromo.html" class="card3 opacity-100 hover:opacity-85 w-[280px] min-[435px]:w-[330px] min-[530px]:w-[400px] min-[780px]:w-[100%] h-[235px] min-[780px]:h-[280px] min-[900px]:h-[330px] min-[1270px]:h-[290px] min-[1400px]:h-[350px] min-[1600px]:h-[350px] bg-slate-500 rounded-xl gambar1 bg-cover flex items-end justify-start">
+                <h1 class="pl-4 sm:pl-5 lg:pl-7 pb-4 sm:pb-5 lg:pb-6 text-2xl min-[580px]:text-3xl min-[1178px]:text-4xl min-[1270px]:text-3xl min-[1600px]:text-4xl">Bromo</h1>
+            </a>
+            <a href="nusa-penida.html" class="card4 opacity-100 hover:opacity-85 w-[280px] min-[435px]:w-[330px] min-[530px]:w-[400px] min-[780px]:w-[100%] h-[235px] min-[780px]:h-[280px] min-[900px]:h-[330px] min-[1270px]:h-[290px] min-[1400px]:h-[350px] min-[1600px]:h-[350px] bg-slate-500 rounded-xl gambar4 bg-cover flex items-end justify-start">
+                <h1 class="pl-4 sm:pl-5 lg:pl-7 pb-4 sm:pb-5 lg:pb-6 text-2xl min-[580px]:text-3xl min-[1178px]:text-4xl min-[1270px]:text-3xl min-[1600px]:text-4xl">Nusa Penida</h1>
+            </a>
+            <a href="borobudur.html" class="card5 opacity-100 hover:opacity-85 w-[280px] min-[435px]:w-[330px] min-[530px]:w-[400px] min-[780px]:w-[100%] h-[235px] min-[780px]:h-[280px] min-[900px]:h-[330px] min-[1270px]:h-[290px] min-[1400px]:h-[350px] min-[1600px]:h-[350px] bg-slate-500 rounded-xl gambar5 bg-cover flex items-end justify-start">
+                <h1 class="pl-4 sm:pl-5 lg:pl-7 pb-4 sm:pb-5 lg:pb-6 text-2xl min-[580px]:text-3xl min-[1178px]:text-4xl min-[1270px]:text-3xl min-[1600px]:text-4xl text-start">Candi<br>Borobudur</h1>
+            </a>
+            <a href="banda-neira.html" class="card6 opacity-100 hover:opacity-85 w-[280px] min-[435px]:w-[330px] min-[530px]:w-[400px] min-[780px]:w-[100%] h-[235px] min-[780px]:h-[280px] min-[900px]:h-[330px] min-[1270px]:h-[290px] min-[1400px]:h-[350px] min-[1600px]:h-[350px] bg-slate-500 rounded-xl gambar16 bg-cover flex items-end justify-start">
+                <h1 class="pl-4 sm:pl-5 lg:pl-7 pb-4 sm:pb-5 lg:pb-6 text-2xl min-[580px]:text-3xl min-[1178px]:text-4xl min-[1270px]:text-3xl min-[1600px]:text-4xl">Banda Neira</h1>
+            </a>
+        </div>
+    </div>
+    
+        </div>
+        <div class="withus-page w-[85%%]  mt-16 min-[950px]:mt-28 | flex flex-row justify-center items-center">
+            <div class="w-[75%] flex justify-center items-center flex-col min-[950px]:flex-row ">
+                <div class="bagian-kiri w-full min-[950px]:w-1/2">
+                    <h1 class="font-semibold text-2xl min-[460px]:text-3xl min-[780px]:text-4xl  text-start">Experience The New <br>Adventure</h1>
+                    <p class="mt-5 w-[98%] text-[15px] min-[500px]:text-base">Rasakan petualangan baru yang menakjubkan bersama kami dalam wisata terbaik Indonesia, di mana keindahan alam dan budaya berpadu harmonis,
+                         siap memberikan pengalaman tak terlupakan yang akan memuaskan hasrat Anda akan eksplorasi dan keajaiban.</p>
+                    <div class=" space-y-5 min-[950px]:space-y-3 min-[1315px]:space-y-5 mt-10">
+                        <div class="benefit flex flex-row ">
+                            <div class="icon mr-3 min-[600px]:mr-5 flex justify-center items-center">
+                                <img class=" w-16 min-[415px]:w-16 min-[600px]:w-10 min-[1335px]:w-12 h-11  min-[600px]:h-10 min-[1000px]:h-9 min-[1335px]:h-12" src="Asset/icon12.png" alt="">
+                            </div>
+                            <div class="area-text">
+                                <h1 class=" text-lg min-[720px]:text-xl min-[950px]:text-lg min-[1190px]:text-xl font-semibold">Safe Traveling</h1>
+                                <p class=" text-[12px] min-[475px]:text-[14px] min-[950px]:text-[12px] min-[1190px]:text-sm w-[90%]">Solusi Tepat untuk Pengalaman Wisata yang Nyaman dan Berkesan.</p>
+                            </div>
+                        </div>
+                        <div class="benefit flex flex-row ">
+                            <div class="icon mr-3 min-[600px]:mr-5 flex justify-center items-center">
+                                <img class=" w-16 min-[415px]:w-16 min-[600px]:w-10 min-[1335px]:w-12 h-11 min-[370px]:h-10 min-[600px]:h-10 min-[1000px]:h-9 min-[1335px]:h-12" src="Asset/icon13.png" alt="">
+                            </div>
+                            <div class="area-text">
+                                <h1 class=" text-lg min-[720px]:text-xl min-[950px]:text-lg min-[1190px]:text-xl font-semibold">Tour Guide</h1>
+                                <p class="  text-[12px] min-[475px]:text-[14px] min-[950px]:text-[12px] min-[1190px]:text-sm w-[90%]">Temukan Pengalaman Terbaik dengan Bimbingan para Ahli di perjalanan anda.</p>
+                            </div>
+                        </div>
+                        <div class="benefit flex flex-row ">
+                            <div class="icon mr-3 min-[600px]:mr-5 flex justify-center items-center">
+                                <img class=" w-16 min-[415px]:w-16 min-[600px]:w-10 min-[1335px]:w-12 h-11 min-[370px]:h-10 min-[600px]:h-10 min-[1000px]:h-9 min-[1335px]:h-12" src="Asset/icon14.png" alt="">
+                            </div>
+                            <div class="area-text">
+                                <h1 class=" text-lg min-[720px]:text-xl min-[950px]:text-lg min-[1190px]:text-xl font-semibold">Friendly Price</h1>
+                                <p class=" text-[12px] min-[475px]:text-[14px] min-[950px]:text-[12px] min-[1190px]:text-sm w-[90%]">Solusi Terjangkau yang Tetap Menjamin Kualitas dan Kenyamanan Liburan Anda..</p>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="bagian-kanan mt-16 min-[950px]:mt-10 w-full min-[950px]:w-1/2 flex justify-center min-[950px]:justify-end items-center">
+                    <img class="w-[90%]" src="Asset/gambar6.png" alt="">
+    
+                </div>
+            </div>
+            
+        </div> 
+          <div id="destin" class="moredesti-page  w-[75%] mt-20 min-[950px]:mt-28  | flex flex-col justify-center items-start">
+            <h1 class="font-semibold text-2xl min-[460px]:text-3xl min-[780px]:text-4xl  mb-10">Find More Destination</h1>
+            <div class="container mx-auto">
+                <div class="relative">
+                    <button id="scrollLeft"
+                        class="absolute z-10 text-xl top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-[#236975] text-white rounded-full  items-center justify-center focus:outline-none shadow-lg hidden">
+                        &#10094;
+                    </button>
+
+                    <div id="scrollContainer" class="flex gap-5 overflow-x-hidden ">
+                         
+                        <button
+                            class=" w-[300px] h-[300px] flex-shrink-0 bg-cover rounded-xl text-white p-5 flex flex-col justify-end items-start gambar9">
+                            <h1 class=" text-xl min-[1350px]:text-2xl font-semibold">Candi Prambanan</h1>
+                            <p class="text-xs sm:text-sm">Yogyakarta</p>
+                        </button>
+                        <button
+                            class=" w-[300px] h-[300px] flex-shrink-0 bg-cover rounded-2xl text-white p-5 flex flex-col justify-end items-start gambar8">
+                            <h1 class=" text-xl min-[1350px]:text-2xl font-semibold">Gunung Rinjani</h1>
+                            <p class="text-xs sm:text-sm">Lombok</p>
+                        </button>
+                        <button
+                            class=" w-[300px] h-[300px] flex-shrink-0 bg-cover rounded-2xl text-white p-5 flex flex-col justify-end items-start gambar7">
+                            <h1 class=" text-xl min-[1350px]:text-2xl font-semibold">Monas</h1>
+                            <p class="text-xs sm:text-sm">Jakarta</p>
+                        </button>
+                        <button
+                            class=" w-[300px] h-[300px] flex-shrink-0 bg-cover rounded-2xl text-white p-5 flex flex-col justify-end items-start gambar10">
+                            <h1 class=" text-xl min-[1350px]:text-2xl font-semibold">Rumah Gadang</h1>
+                            <p class="text-xs sm:text-sm">Padang</p>
+                        </button>
+                        <button
+                            class=" w-[300px] h-[300px] flex-shrink-0 bg-cover rounded-2xl text-white p-5 flex flex-col justify-end items-start gambar12">
+                            <h1 class=" text-xl min-[1350px]:text-2xl font-semibold">Danau Toba</h1>
+                            <p class="text-xs sm:text-sm">Medan</p>
+                        </button>
+                        <button
+                            class=" w-[300px] h-[300px] flex-shrink-0 bg-cover rounded-2xl text-white p-5 flex flex-col justify-end items-start gambar11">
+                            <h1 class=" text-xl min-[1350px]:text-2xl font-semibold">Candi Muaro Jambi</h1>
+                            <p class="text-xs sm:text-sm">Jambi</p>
+                        </button>
+                    </div>
+
+                    <button id="scrollRight"
+                        class="absolute right-0 z-10 text-xl top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-[#236975] text-white rounded-full flex items-center justify-center focus:outline-none shadow-lg">
+                        &#10095;
+                    </button>
+                </div> 
+            </div>
+            <div class="bagian-button w-full flex justify-center items-center mt-10 min-[800px]:mt-14">
+                <button class="bg-[#236975] hover:bg-[#45838E] rounded-3xl w-56 h-12">
+                    <p class="font-medium text-white text-base min-[800px]:text-lg">See all destination</p>
+                </button>
+            </div> 
+        </div> 
+         <div class="villtel-page  w-[75%] mt-20  min-[950px]:mt-28 | flex flex-col justify-center items-start">
+            <h1 class="text-2xl min-[460px]:text-3xl min-[780px]:text-4xl font-semibold ">Villa & Resorts in Indonesia</h1>
+            <div class="button_list my-8 overflow-x-auto flex justify-start w-full">
+                
+                <ul class="flex flex-row gap-4 min-[950px]:gap-6 whitespace-nowrap">
+                        <li>
+                            <button class="bg-[#CFECF1] rounded-3xl w-20 h-[50px]">
+                                <p class="font-medium text-[#236975] text-base min-[950px]:text-lg">Bali</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="bg-[#236975] hover:bg-[#45838E] rounded-3xl w-28 h-[50px]">
+                                <p class="font-medium text-white text-base min-[950px]:text-lg">Bandung</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="bg-[#236975] hover:bg-[#45838E] rounded-3xl w-24 h-[50px]">
+                                <p class="font-medium text-white text-base min-[950px]:text-lg">Malang</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="bg-[#236975] hover:bg-[#45838E] rounded-3xl w-32 h-[50px]">
+                                <p class="font-medium text-white text-base min-[950px]:text-lg">Yogyakarta</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="bg-[#236975] hover:bg-[#45838E] rounded-3xl w-20 h-[50px]">
+                                <p class="font-medium text-white text-base min-[950px]:text-lg">Bogor</p>
+                            </button>
+                        </li>
+                </ul>
+               
+            </div>
+            <div class="container mx-auto">
+                <div class="relative">
+                    <button id="scrollLeft2"
+                        class="absolute z-10 text-xl top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-[#236975] text-white rounded-full flex items-center justify-center focus:outline-none shadow-lg">
+                        &#10094;
+                    </button>
+
+                    <div id="scrollContainer2" class="flex gap-5 overflow-x-hidden px-2">
+                        <button
+                            class="w-[300px] sm:w-[320px] h-[386px] min-[635px]:h-[400px] flex-shrink-0 bg-cover flex flex-col ">
+                            <div class="bagian-gambar">
+                                <img class="w-[95%] rounded-2xl" src="Asset/gambar14.png" alt="">
+                            </div>
+                            <div class="bagian-text pl-2 pt-3">
+                                <h1 class="font-semibold mb-1 text-xl">AYANA Villas Bali</h1>
+                                <img class="w-24" src="Asset/icon15.png" alt="">
+                                <div class="rating my-1 flex flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">8.7/10</h1>
+                                </div>
+                                <p class="text-[#E62D2D] text-start font-medium">Rp 22.221.401</p>
+                            </div>
+
+                        </button>
+                        <button
+                            class="w-[300px] sm:w-[320px] h-[386px] min-[635px]:h-[400px] flex-shrink-0 bg-cover flex flex-col ">
+                            <div class="bagian-gambar">
+                                <img class="w-[95%] rounded-2xl" src="Asset/gambar17.png" alt="">
+                            </div>
+                            <div class="bagian-text pl-2 pt-3">
+                                <h1 class="font-semibold mb-1 text-xl">Noah Villa & Chapel</h1>
+                                <img class="w-20" src="Asset/icon24.png" alt="">
+                                <div class="rating my-1 flex flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">8.4/10</h1>
+                                </div>
+                                <p class="text-[#E62D2D] text-start font-medium">Rp 462.810</p>
+                            </div>
+
+                        </button>
+                        <button
+                            class="w-[300px] sm:w-[320px] h-[386px] min-[635px]:h-[400px] flex-shrink-0 bg-cover flex flex-col ">
+                            <div class="bagian-gambar">
+                                <img class="w-[95%] rounded-2xl" src="Asset/gambar18.png" alt="">
+                            </div>
+                            <div class="bagian-text pl-2 pt-3">
+                                <h1 class="font-semibold mb-1 text-xl">Bali Rich Villas Seminyak </h1>
+                                <img class="w-14" src="Asset/icon25.png" alt="">
+                                <div class="rating my-1 flex flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">7.1/10</h1>
+                                </div>
+                                <p class="text-[#E62D2D] text-start font-medium">Rp 574.261</p>
+                            </div>
+
+                        </button>
+                        <button
+                            class="w-[300px] sm:w-[320px] h-[386px] min-[635px]:h-[400px] flex-shrink-0 bg-cover flex flex-col ">
+                            <div class="bagian-gambar">
+                                <img class="w-[95%] rounded-2xl" src="Asset/gambar19.png" alt="">
+                            </div>
+                            <div class="bagian-text pl-2 pt-3">
+                                <h1 class="font-semibold mb-1 text-xl">The Banyumas Villa</h1>
+                                <img class="w-24" src="Asset/icon15.png" alt="">
+                                <div class="rating my-1 flex flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">8.6/10</h1>
+                                </div>
+                                <p class="text-[#E62D2D] text-start font-medium">Rp 595.041</p>
+                            </div>
+
+                        </button>
+                        <button
+                            class="w-[300px] sm:w-[320px] h-[386px] min-[635px]:h-[400px] flex-shrink-0 bg-cover flex flex-col ">
+                            <div class="bagian-gambar">
+                                <img class="w-[95%] rounded-2xl" src="Asset/gambar20.png" alt="">
+                            </div>
+                            <div class="bagian-text pl-2 pt-3">
+                                <h1 class="font-semibold mb-1 text-xl">Mount Batur Villa</h1>
+                                <img class="w-24" src="Asset/icon15.png" alt="">
+                                <div class="rating my-1 flex flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">8.7/10</h1>
+                                </div>
+                                <p class="text-[#E62D2D] text-start font-medium">Rp 585.455</p>
+                            </div>
+
+                        </button>
+                        <button
+                            class="w-[300px] sm:w-[320px] h-[386px] min-[635px]:h-[400px] flex-shrink-0 bg-cover flex flex-col ">
+                            <div class="bagian-gambar">
+                                <img class="w-[95%] rounded-2xl" src="Asset/gambar21.png" alt="">
+                            </div>
+                            <div class="bagian-text pl-2 pt-3">
+                                <h1 class="font-semibold mb-1 text-xl">Lasanti Villas Seminyak</h1>
+                                <img class="w-24" src="Asset/icon15.png" alt="">
+                                <div class="rating my-1 flex flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">8.9/10</h1>
+                                </div>
+                                <p class="text-[#E62D2D] text-start font-medium">Rp 2.373.556</p>
+                            </div>
+
+                        </button>
+
+
+                    </div>
+                    <button id="scrollRight2"
+                        class="absolute right-0 z-10 text-xl top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-[#236975] text-white rounded-full flex items-center justify-center focus:outline-none shadow-lg">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+            <div class="bagian-button w-full flex justify-center items-center mt-10 min-[800px]:mt-14">
+                <button class="bg-[#236975] hover:bg-[#45838E] rounded-3xl w-56 h-12">
+                    <p class="font-medium text-white text-base min-[800px]:text-lg">See all Villa</p>
+                </button>
+            </div> 
+
+        </div> 
+        <div class="komodo-page w-[75%] mt-20  min-[950px]:mt-28   | flex flex-col min-[950px]:flex-row justify-center items-start">
+            <div class="bagian-kiri w-full min-[950px]:w-1/2">
+                <h1 class="font-semibold text-2xl min-[460px]:text-3xl min-[780px]:text-4xl text-start">Come see Komodo <br>with us</h1>
+                <div class="bagian-kana my-10 n w-full min-[950px]:w-1/2 flex min-[950px]:hidden justify-center min-[950px]:justify-end items-center">
+                    <img class=" w-full min-[550px]:w-[90%] min-[600px]:w-[80%] rounded-2xl" src="Asset/gambar15.png" alt="">
+                </div>
+                <p class="mt-5 w-full text-sm min-[550px]:text-base min-[950px]:text-sm min-[1250px]:text-base">Jelajahi keajaiban alam Indonesia bersama kami, dan temukan pesona unik Pulau Komodo yang tiada duanya. Di sini, Anda akan bertemu dengan komodo, kadal terbesar di dunia, dalam habitat aslinya yang menakjubkan. Pulau yang memukau ini tidak hanya menawarkan pengalaman bertemu satwa langka, tetapi juga pemandangan alam yang luar biasa, 
+                    mulai dari pantai berpasir putih hingga terumbu karang yang memikat penyelam dari seluruh dunia.
+                </p>
+                <p class="mt-5 w- text-base min-[950px]:text-sm min-[1250px]:text-base"> Bersama kami, perjalanan Anda ke Pulau Komodo akan menjadi momen tak terlupakan. Kami akan membawa Anda melintasi perairan biru yang jernih, menelusuri jalur trekking yang menantang, dan memastikan setiap detik perjalanan Anda penuh dengan pengalaman yang kaya dan memuaskan. Nikmati keindahan alam yang masih alami,
+                     dan biarkan kami menjadi pemandu Anda dalam petualangan yang penuh keajaiban ini.
+                </p>
+                <div class="area-button w-full flex justify-center items-center min-[950px]:justify-start">
+                    <button class=" bg-[#236975] hover:bg-[#45838E] rounded-3xl w-52 min-[550px]:w-56 min-[600px]:w-64 min-[950px]:w-44 h-12 min-[545px]:h-14 mt-8">
+                        <p class="font-semibold text-white text-base min-[550px]:text-lg">Explore more</p>
+                    </button>
+                </div>
+              
+
+
+
+            </div>
+              <div class="bagian-kanan mt-12 min-[950px]:mt-28 min-[1100px]:mt-20 min-[1350px]:mt-14 min-[1500px]:mt-10 w-full min-[950px]:w-1/2 hidden min-[950px]:flex justify-center min-[950px]:justify-end items-center">
+                    <img class=" w-full min-[550px]:w-[90%] min-[600px]:w-[85%] min-[950px]:w-[90%] min-[1500px]:w-[85%] rounded-2xl" src="Asset/gambar15.png" alt="">
+    
+                </div>
+        </div> 
+          <div class="video-page w-[75%] h-[30rem] min-[430px]:h-[35rem] min-[550px]:h-[40rem]  mt-20  min-[950px]:mt-28   | flex flex-row justify-center items-start relative overflow-hidden rounded-2xl">
+          
+            <video class="absolute pointer-events-none top-0 left-0 w-full h-full object-cover" autoplay muted loop>
+                <source src="Asset/Bromo Footage.mp4" type="video/mp4">
+            </video>
+
+           
+            <div
+                class="relative z-10 flex flex-col justify-center items-center w-full h-full bg-black bg-opacity-50 rounded-2xl">
+                <h1 class=" text-[17px] min-[395px]:text-[20px] min-[455px]:text-2xl min-[600px]:text-3xl min-[750px]:text-4xl min-[1080px]:text-5xl text-white montserrat font-bold">THE BEAUTY OF BROMO</h1>
+                <button class="bg-white hover:bg-gray-200 rounded-3xl w-44 min-[395px]:w-52 min-[530px]:w-60 min-[950px]:w-64 h-10 min-[445px]:h-12 mt-5 min-[600px]:mt-8 min-[750px]:mt-10">
+                    <p class="font-semibold text-[#171717] text-xs min-[395px]:text-sm min-[750px]:text-base">Discover the destination</p>
+                </button>
+            </div>
+        </div> 
+        <div id="review" class="traveler-page w-[75%] mt-20  min-[950px]:mt-28 | flex flex-col justify-center items-start">
+            <h1 class=" text-2xl min-[460px]:text-3xl min-[780px]:text-4xl font-semibold mb-10">What our Travelers says</h1>
+            <div class="container mx-auto">
+                <div class="relative">
+               
+                    <button id="scrollLeft3"
+                        class="absolute z-10 text-xl top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-[#236975] text-white rounded-full  items-center justify-center focus:outline-none shadow-lg hidden">
+                        &#10094;
+                    </button>
+
+                    <div id="scrollContainer3" class="flex gap-8 overflow-x-hidden px-2">
+                        <div
+                            class=" w-[300px] min-[440px]:w-[320px] min-[510px]:w-[370px] md:w-[395px] space-y-7 min-[440px]:space-y-4 md:space-y-7  h-[350px] md:h-[390px] bg-[#CCECF6] flex-shrink-0 bg-cover rounded-2xl text-white p-7 flex flex-col justify-start items-start">
+                            <img class=" w-[50px] md:w-[60px] " src="Asset/icon17.png" alt="">
+                            <p class=" text-[13px] min-[440px]:text-sm min-[510px]:text-base text-black w-[15rem] min-[440px]:w-[17rem] min-[510px]:w-[21rem]">
+                                Liburan saya ke Indonesia sangat memuaskan berkat panduan dari website ini. Destinasi yang direkomendasikan menawarkan pemandangan indah dan pengalaman budaya yang mendalam,
+                                 membuat perjalanan saya lancar dan menyenangkan.</p>
+                            <div class="profile w-full flex flex-row items-center justify-start">
+                                <img class=" w-10 min-[510px]:w-14 mr-4" src="Asset/icon26.png" alt="">
+                                <div class="text-review text-[#171717] flex-col justify-center items-center">
+                                    <h1 class="font-semibold text-base min-[510px]:text-lg">Firja Abiyu</h1>
+                                    <p class="text-sm">Traveler</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div
+                            class=" w-[300px] min-[440px]:w-[320px] min-[510px]:w-[370px] md:w-[395px]  h-[350px] md:h-[390px] space-y-4 min-[440px]:space-y-4 md:space-y-7  bg-[#CCECF6] flex-shrink-0 bg-cover rounded-2xl text-white p-7 flex flex-col justify-start items-start">
+                            <img class=" w-[50px] md:w-[60px] " src="Asset/icon17.png" alt="">
+                            <p class=" text-[13px] min-[440px]:text-sm min-[510px]:text-base text-black w-[15rem] min-[440px]:w-[17rem]  min-[510px]:w-[21rem]">
+                                Website Indozons ini sangat informatif dan mudah dijelajahi. Desainnya menarik dengan gambar-gambar yang memikat, membuat saya semakin tertarik untuk menjelajahi keindahan Indonesia.
+                                 Pengalaman menjelajahnya menyenangkan dan penuh inspirasi untuk perjalanan.</p>
+                            <div class="profile w-full flex flex-row items-center justify-start">
+                                <img class=" w-10 min-[510px]:w-14 mr-4" src="Asset/icon27.png" alt="">
+                                <div class="text-review text-[#171717] flex-col justify-center items-center">
+                                    <h1 class="font-semibold text-base min-[510px]:text-lg">Marina Joe</h1>
+                                    <p class="text-sm">Traveler</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div
+                            class=" w-[300px] min-[440px]:w-[320px] min-[510px]:w-[370px] md:w-[395px]  h-[350px] md:h-[390px] space-y-8 min-[440px]:space-y-7 md:space-y-10  bg-[#CCECF6] flex-shrink-0 bg-cover rounded-2xl text-white p-7 flex flex-col justify-start items-start">
+                            <img class=" w-[50px] md:w-[60px] " src="Asset/icon17.png" alt="">
+                            <p class=" text-[13px] min-[440px]:text-sm min-[510px]:text-base text-black w-[15rem] min-[440px]:w-[17rem]  min-[510px]:w-[21rem]">
+                                Website ini sangat membantu merencanakan liburan saya ke Indonesia. Destinasi yang direkomendasikan menawarkan pemandangan indah dan pengalaman memukau. 
+                                Semua informasi yang dibutuhkan jelas dan berguna.</p>
+                            <div class="profile w-full flex flex-row items-center justify-start">
+                                <img class=" w-10 min-[510px]:w-14 mr-4" src="Asset/icon30.png" alt="">
+                                <div class="text-review text-[#171717] flex-col justify-center items-center">
+                                    <h1 class="font-semibold text-base min-[510px]:text-lg">Azka Alkahfi</h1>
+                                    <p class="text-sm">Traveler</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div
+                            class=" w-[300px] min-[440px]:w-[320px] min-[510px]:w-[370px] md:w-[395px]  h-[350px] md:h-[390px] space-y-8 min-[440px]:space-y-7 md:space-y-10  bg-[#CCECF6] flex-shrink-0 bg-cover rounded-2xl text-white p-7 flex flex-col justify-start items-start">
+                            <img class=" w-[50px] md:w-[60px] " src="Asset/icon17.png" alt="">
+                            <p class=" text-[13px] min-[440px]:text-sm min-[510px]:text-base text-black w-[15rem] min-[440px]:w-[17rem] min-[510px]:w-[21rem]">
+                                Website ini sangat membantu dalam merencanakan liburan saya ke Indonesia. Destinasi yang direkomendasikan menawarkan pengalaman yang luar biasa,
+                                 dari pemandangan spektakuler hingga budaya yang kaya.</p>
+                            <div class="profile w-full flex flex-row items-center justify-start">
+                                <img class=" w-10 min-[510px]:w-14 mr-4" src="Asset/icon29.png" alt="">
+                                <div class="text-review text-[#171717] flex-col justify-center items-center">
+                                    <h1 class="font-semibold text-base min-[510px]:text-lg">Emma Stone</h1>
+                                    <p class="text-sm">Traveler</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div
+                            class=" w-[300px] min-[440px]:w-[320px] min-[510px]:w-[370px] md:w-[395px]  h-[350px] md:h-[390px] space-y-8 min-[440px]:space-y-7 md:space-y-10 bg-[#CCECF6] flex-shrink-0 bg-cover rounded-2xl text-white p-7 flex flex-col justify-start items-start">
+                            <img class=" w-[50px] md:w-[60px] " src="Asset/icon17.png" alt="">
+                            <p class=" text-[13px] min-[440px]:text-sm min-[510px]:text-base text-black w-[15rem] min-[440px]:w-[17rem]  min-[510px]:w-[21rem]">
+                                Website ini membuat perencanaan wisata ke Indonesia jadi lebih mudah dan inspiratif. 
+                                Informasinya lengkap, dan gambar-gambar yang ditampilkan benar-benar menggambarkan keindahan destinasi yang ada.
+                                </p>
+                            <div class="profile w-full flex flex-row items-center justify-start">
+                                <img class=" w-10 min-[510px]:w-14 mr-4" src="Asset/icon31.png" alt="">
+                                <div class="text-review text-[#171717] flex-col justify-center items-center">
+                                    <h1 class="font-semibold text-base min-[510px]:text-lg">Andy Taft</h1>
+                                    <p class="text-sm">Traveler</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div
+                            class=" w-[300px] min-[440px]:w-[320px] min-[510px]:w-[370px] md:w-[395px]  h-[350px] md:h-[390px] space-y-6 min-[440px]:space-y-4 md:space-y-7  bg-[#CCECF6] flex-shrink-0 bg-cover rounded-2xl text-white p-7 flex flex-col justify-start items-start">
+                            <img class=" w-[50px] md:w-[60px] " src="Asset/icon17.png" alt="">
+                            <p class=" text-[13px] min-[440px]:text-sm min-[510px]:text-base text-black w-[15rem] min-[440px]:w-[17rem]  min-[510px]:w-[21rem]">Website ini membuat liburan saya ke Indonesia luar biasa dengan rekomendasi destinasi yang tepat. Pemandangan menakjubkan dan pengalaman kaya memuaskan. 
+                                Informasi yang disediakan memudahkan perjalanan dan memastikan kelancaran.</p>
+                            <div class="profile w-full flex flex-row items-center justify-start">
+                                <img class=" w-10 min-[510px]:w-14 mr-4" src="Asset/icon28.png" alt="">
+                                <div class="text-review text-[#171717] flex-col justify-center items-center">
+                                    <h1 class="font-semibold text-base min-[510px]:text-lg">Ammi Wakita</h1>
+                                    <p class="text-sm">Traveler</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                   
+                    <button id="scrollRight3"
+                        class="absolute right-0 z-10 text-xl top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-[#236975] text-white rounded-full flex items-center justify-center focus:outline-none shadow-lg">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+        </div> 
+          <div id="article" class="article-page w-[75%] mt-20 min-[950px]:mt-28 |  justify-center items-start">
+            <div class="bagian-button w-full  mt-10 min-[800px]:mt-14">
+                <div class="flex justify-end items-center">
+                    <div class=" w-full min-[1000px]:w-1/2 flex justify-start">
+                        <h1 class="font-semibold text-2xl min-[460px]:text-3xl min-[780px]:text-4xl text-start">Explore our latest stories</h1>
+                    </div>
+                    <div class="w-1/2 hidden min-[1000px]:flex  justify-end">
+                        <button class="buttonArticle bg-[#236975] hover:bg-[#45838E] rounded-3xl w-56 h-12">
+                            <p class="font-medium text-white text-base min-[800px]:text-lg">Read more Article</p>
+                        </button>
+                    </div>
+                </div>
+            </div> 
+            <div class="flex flex-col min-[1000px]:flex-row ">
+                <div class="bagian-kiri w-full min-[1000px]:w-1/2">
+                    <button
+                        class="w-full h-[350px] min-[420px]:h-[500px] min-[600px]:h-[550px] bg-[#CCECF6] text-start mt-8 flex-shrink-0 bg-cover gambar25  rounded-xl text-white p-7 pb-10 flex flex-col justify-end items-start">
+                        <h1 class="font-bold text-sm min-[530px]:text-base mb-3 ">TIPS AND TRICK</h1>
+                        <p class="font-semibold text-[13px] min-[400px]:text-[18px] min-[530px]:text-[23px] min-[1320px]:text-[25px]">Bagaimana cara Liburan ke <br> Bromo hanya dengan Rp 1.000.000? </p>
+                    </button>
+    
+                </div>
+                <div class="bagian-kanan w-full min-[1000px]:w-1/2 ml-0 min-[1000px]:ml-5 mt-[30px] flex flex-col space-y-5 justify-center items-center">
+                    <button
+                        class=" w-full h-[158px] text-start min-[420px]:h-[171px] bg-[#CCECF6] hover:bg-[#BEDCE6] flex-shrink-0 bg-cover rounded-xl text-white p-4 min-[400px]:p-6 flex flex-col justify-center min-[420px]:justify-start items-center min-[420px]:items-start">
+                        <div class="article w-full flex flex-row items-center justify-start">
+                            <img class=" w-[100px] min-[445px]:w-[115px] min-[510px]:w-[125px] h-[110px] min-[420px]:h-[130px] rounded-xl" src="Asset/gambar22.png" alt="">
+                            <div class="kalimat flex-col ml-5 space-y-1 text-[#236975]">
+                                <h1 class="font-bold text-[8px] min-[400px]:text-[12px] min-[510px]:text-sm  ">TIPS AND ADVICE</h1>
+                                <p class="font-semibold text-[12px] min-[340px]:text-[14px] min-[400px]:text-[15px] min-[600px]:text-[20px] min-[1000px]:text-[18px] min-[1170px]:text-[20px] min-[1320px]:text-[22px]">3 Destinasi Wisata Terbaik di Yogyakarta</p>
+                                <p class=" text-[6px] min-[400px]:text-[10px] min-[510px]:text-[12px]">Mar 13, 2023 <span>•</span> 8 min read</p>
+                            </div>
+    
+    
+                        </div>
+    
+                    </button>
+                    <button
+                        class=" w-full h-[158px] text-start min-[420px]:h-[171px] bg-[#CCECF6] hover:bg-[#BEDCE6] flex-shrink-0 bg-cover rounded-xl text-white p-4 min-[400px]:p-6 flex flex-col justify-center min-[420px]:justify-start items-center min-[420px]:items-start">
+                        <div class="article w-full flex flex-row items-center justify-start">
+                            <img class=" w-[100px] min-[445px]:w-[115px] min-[510px]:w-[125px] h-[110px] min-[420px]:h-[130px] rounded-xl" src="Asset/gambar23.png" alt="">
+                            <div class="kalimat flex-col ml-5 space-y-1 text-[#236975]">
+                                <h1 class="font-bold text-[8px] min-[400px]:text-[12px] min-[510px]:text-sm  ">TIPS AND ADVICE</h1>
+                                <p class="font-semibold text-[12px] min-[340px]:text-[14px] min-[400px]:text-[15px] min-[600px]:text-[20px] min-[1000px]:text-[18px] min-[1170px]:text-[20px] min-[1320px]:text-[22px]">5 Kota Indonesia dengan destinasi wisata terbaik </p>
+                                <p class=" text-[6px] min-[400px]:text-[10px] min-[510px]:text-[12px]">Jan 21, 2022 <span>•</span> 6 min read</p>
+                            </div>
+    
+    
+                        </div>
+    
+                    </button>
+                    <button
+                        class=" w-full h-[158px] text-start min-[420px]:h-[171px] bg-[#CCECF6] hover:bg-[#BEDCE6] flex-shrink-0 bg-cover rounded-xl text-white p-4 min-[400px]:p-6 flex flex-col justify-center min-[420px]:justify-start items-center min-[420px]:items-start">
+                        <div class="article w-full flex flex-row items-center justify-start">
+                            <img class=" w-[100px] min-[445px]:w-[115px] min-[510px]:w-[125px] h-[110px] min-[420px]:h-[130px] rounded-xl" src="Asset/gambar24.png" alt="">
+                            <div class="kalimat flex-col ml-5 space-y-1 text-[#236975]">
+                                <h1 class="font-bold text-[8px] min-[400px]:text-[12px] min-[510px]:text-sm  ">ACTIVITIES</h1>
+                                <p class="font-semibold text-[12px] min-[340px]:text-[14px] min-[400px]:text-[15px] min-[600px]:text-[20px] min-[1000px]:text-[18px] min-[1170px]:text-[20px] min-[1320px]:text-[22px]">10 Hal yang harus di lakukan di Jakarta</p>
+                                <p class=" text-[6px] min-[400px]:text-[10px] min-[510px]:text-[12px]">Aug 10, 2024 <span>•</span> 4 min read</p>
+                            </div>
+    
+    
+                        </div>
+    
+                    </button>
+                </div>
+            </div>
+            <div class="bagian-button w-full flex justify-end items-center mt-10 min-[800px]:mt-14">
+                
+                <div class="w-full block min-[1000px]:hidden">
+                    <div class="flex justify-center">
+                        <button class="buttonArticle bg-[#236975] hover:bg-[#45838E] rounded-3xl w-40 min-[450px]:w-56 h-12">
+                            <p class="font-medium text-white text-sm min-[450px]:text-base min-[800px]:text-lg">Read more Article</p>
+                        </button>
+                    </div>
+                </div>
+            </div> 
+          
+
+        </div>
+        <div class="footer w-screen h-[500px] min-[1000px]:h-[650px] bg-[#236975] text-white mt-16 md:mt-20 min-[950px]:mt-28 | flex flex-col justify-center items-center">
+            <div class="w-[75%] flex flex-col min-[1000px]:flex-row  min-[1000px]:mt-16">
+                <div class="bagian-kiri w-full min-[1000px]:w-[45%]">
+                    <div class="bagian-text w-full">
+                        <div class="flex  items-start min-[1000px]:items-start flex-col min-[565px]:flex-row min-[1000px]:flex-col mb-0 min-[565px]:mb-10 md:mb-8 min-[1000px]:mb-0">
+                            <div class="kalimat1 w-full">
+                                <h1 class="baloo text-4xl md:text-5xl font-bold">Indozons</h1>
+                                <p class="text-sm md:text-base">For Explore Everywhere</p>
+                            </div>
+                            <div class="icon-section my-8 min-[565px]:my-0 min-[1000px]:my-16">
+                                <h1 class="font-semibold text-xl md:text-2xl mb-3">Follow us</h1>
+                                <div class="iconArea flex  gap-3 text-xl md:text-xl lg:text-2xl">
+                                    <div
+                                        class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                        <a href="https://www.instagram.com/fahrimauludy/"
+                                            class="fa-brands fa-instagram text-[#236975] hover:text-[#c2c2ab]"></a>
+                                    </div>
+                                    <div
+                                        class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                        <a href="https://www.instagram.com/fahrimauludy/"
+                                            class="fa-brands fa-facebook text-[#236975] hover:text-[#c2c2ab]"></a>
+                                    </div>
+                                    <div
+                                        class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                        <a href="https://www.instagram.com/fahrimauludy/"
+                                            class="fa-brands fa-youtube text-[#236975] hover:text-[#c2c2ab]"></a>
+                                    </div>
+                                    <div
+                                        class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                        <a href="https://www.instagram.com/fahrimauludy/"
+                                            class="fa-brands fa-tiktok text-[#236975] hover:text-[#c2c2ab]"></a>
+                                    </div>
+                                    <div
+                                        class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                        <a href="https://www.instagram.com/fahrimauludy/"
+                                            class="fa-brands fa-twitter text-[#236975] hover:text-[#c2c2ab]"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="email-section mb-8 min-[1000px]:mb-0">
+                            <p class="font-semibold text-lg md:text-xl min-[1000px]:text-lg xl:text-xl ">Get travel recommendations <br> from us</p>
+                            <div class="email-sent flex flex-col">
+                                <input class=" mt-5 w-full  text-[#171717] focus:outline-none h-12 rounded-3xl pl-5 p-3" type="text"
+                                    placeholder="Email Address">
+                                <button class="bg-[#CFECF1] hover:bg-[#BEDCE6] rounded-full w-full  h-12 mt-2">
+                                    <p class="font-semibold text-[#236975] text-base min-[400px]:text-lg">Subscribe Now</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="bagian-kanan w-full ml-0 min-[1000px]:ml-14 min-[1615px]:ml-0 gap-28 min-[1000px]:gap-10 min-[1275px]:gap-16 min-[1470px]:gap-24 min-[1600px]:gap-32 hidden min-[1000px]:flex justify-center flex-row">
+                        <div class="list-1">
+                            <h1 class="text-xl font-semibold">About us</h1>
+                            <ul class="mt-5 text-sm min-[1085px]:text-base space-y-3">
+                                <li><a href="#">About Indozons</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">New Release Features</a></li>
+                            </ul>
+                        </div>
+                        <div class="list-2">
+                            <h1 class="text-xl font-semibold">Product</h1>
+                            <ul class="mt-5 text-sm min-[1085px]:text-base space-y-3">
+                                <li><a href="#">Hotels</a></li>
+                                <li><a href="#">Flights</a></li>
+                                <li><a href="#">Trains</a></li>
+                                <li><a href="#">Airport & Transfer</a></li>
+                                <li><a href="#">Car Rental</a></li>
+                                <li><a href="#">Villas</a></li>
+                                <li><a href="#">Taxi</a></li>
+                                <li><a href="#">Apartements</a></li>
+                                <li><a href="#">PayLater</a></li>
+                                <li><a href="#">Gift Voucher</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="list-3">
+                            <h1 class="text-xl font-semibold">Destination</h1>
+                            <div class="flex flex-row">
+                                <ul class="mt-5 mr-10 text-sm min-[1085px]:text-base space-y-3">
+                                    <li><a href="#">Jakarta</a></li>
+                                    <li><a href="#">Bali</a></li>
+                                    <li><a href="#">Yogyakarta</a></li>
+                                    <li><a href="#">Lombok</a></li>
+                                    <li><a href="#">Padang</a></li>
+                                    <li><a href="#">Surabaya</a></li>
+                                    <li><a href="#">Palembang</a></li>
+                                    <li><a href="#">Aceh</a></li>
+                                    <li><a href="#">Jayapura</a></li>
+                                    <li><a href="#">Pekanbaru</a></li>
+                                    <li><a href="#">Kupang</a></li>
+                                </ul>
+                                <ul class="mt-5 text-sm min-[1085px]:text-base space-y-3">
+                                    <li><a href="#">Bandung</a></li>
+                                    <li><a href="#">Malang</a></li>
+                                    <li><a href="#">Batam</a></li>
+                                    <li><a href="#">Solo</a></li>
+                                    <li><a href="#">Bogor</a></li>
+                                    <li><a href="#">Makassar</a></li>
+                                    <li><a href="#">Semarang</a></li>
+                                    <li><a href="#">Manado</a></li>
+                                    <li><a href="#">Jambi</a></li>
+                                    <li><a href="#">Balikpapan</a></li>
+                                    <li><a href="#">Tanggerang</a></li>
+                                </ul>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+               
+            <div class="text-copyright mt-1 min-[565px]:mt-5 min-[1000px]:mt-12">
+                <h1 class="text-sm">© 2024 Indozons. All Rights Reserved.</h1>
+            </div> 
+
+        </div>       
+
+    </div> 
+
+    <script>
+
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop) {
+      // Scroll down
+      navbar.classList.add('navbar-hidden');
+    } else {
+      // Scroll up
+      navbar.classList.remove('navbar-hidden');
+    }
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+  });
+
+    function initializeMenuButton() {
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+    }
+
+    initializeMenuButton();
+
+    document.addEventListener('DOMContentLoaded', () => {
+    let activeButton = document.querySelector('.pilihan-kendaraan button.active');
+
+    if (!activeButton) {
+        // Jika tidak ada tombol yang aktif, jadikan "Hotels" sebagai default
+        activeButton = document.querySelector('.pilihan-kendaraan button[data-item="item1"]');
+        activeButton.classList.add('active');
+        document.getElementById('item1').classList.remove('hidden');
+    }
+
+    document.querySelectorAll('.pilihan-kendaraan button').forEach(button => {
+        button.addEventListener('click', () => {
+            const itemId = button.getAttribute('data-item');
+
+            // Mengganti konten card-aksi
+            document.querySelectorAll('.card-aksi .content').forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            const selectedContent = document.getElementById(itemId);
+            if (selectedContent) {
+                selectedContent.classList.remove('hidden');
+            }
+
+            // Mengubah warna tombol yang aktif
+            if (activeButton) {
+                activeButton.classList.remove('active');
+            }
+            button.classList.add('active');
+            activeButton = button;
+        });
+    });
+});
+
+            
+
+
+        //page destination
+        const scrollLeftBtn = document.getElementById('scrollLeft');
+        const scrollRightBtn = document.getElementById('scrollRight');
+        const scrollContainer = document.getElementById('scrollContainer');
+
+        // Initially hide the left scroll button
+        scrollLeftBtn.style.display = 'none';
+
+        scrollRightBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: 322,
+                behavior: 'smooth'
+            });
+
+            // Show the left button when right button is clicked
+            scrollLeftBtn.style.display = 'flex';
+        });
+
+        scrollLeftBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: -322,
+                behavior: 'smooth'
+            });
+
+            // Hide the left button if scrolled back to the start
+            if (scrollContainer.scrollLeft === 0) {
+                scrollLeftBtn.style.display = 'none';
+            }
+        });
+
+        scrollContainer.addEventListener('scroll', () => {
+            // Hide the left button if at the start of the scroll container
+            if (scrollContainer.scrollLeft === 0) {
+                scrollLeftBtn.style.display = 'none';
+            } else {
+                scrollLeftBtn.style.display = 'flex';
+            }
+        });
+
+
+        // page villa
+
+        const scrollLeftBtn2 = document.getElementById('scrollLeft2');
+        const scrollRightBtn2 = document.getElementById('scrollRight2');
+        const scrollContainer2 = document.getElementById('scrollContainer2');
+
+        scrollLeftBtn2.style.display = 'none';
+
+        scrollRightBtn2.addEventListener('click', () => {
+            scrollContainer2.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+
+            // Show the left button when right button is clicked
+            scrollLeftBtn2.style.display = 'flex';
+        });
+
+        scrollLeftBtn2.addEventListener('click', () => {
+            scrollContainer2.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+
+            // Hide the left button if scrolled back to the start
+            if (scrollContainer2.scrollLeft === 0) {
+                scrollLeftBtn2.style.display = 'none';
+            }
+        });
+
+        scrollContainer2.addEventListener('scroll', () => {
+            // Hide the left button if at the start of the scroll container
+            if (scrollContainer2.scrollLeft === 0) {
+                scrollLeftBtn2.style.display = 'none';
+            } else {
+                scrollLeftBtn2.style.display = 'flex';
+            }
+        });
+
+        const scrollLeftBtn3 = document.getElementById('scrollLeft3');
+        const scrollRightBtn3 = document.getElementById('scrollRight3');
+        const scrollContainer3 = document.getElementById('scrollContainer3');
+
+        scrollLeftBtn3.style.display = 'none';
+
+        scrollRightBtn3.addEventListener('click', () => {
+            scrollContainer3.scrollBy({
+                left: 322,
+                behavior: 'smooth'
+            });
+
+            // Show the left button when right button is clicked
+            scrollLeftBtn3.style.display = 'flex';
+        });
+
+        scrollLeftBtn3.addEventListener('click', () => {
+            scrollContainer3.scrollBy({
+                left: -322,
+                behavior: 'smooth'
+            });
+
+            // Hide the left button if scrolled back to the start
+            if (scrollContainer3.scrollLeft === 0) {
+                scrollLeftBtn3.style.display = 'none';
+            }
+        });
+
+        scrollContainer3.addEventListener('scroll', () => {
+            // Hide the left button if at the start of the scroll container
+            if (scrollContainer3.scrollLeft === 0) {
+                scrollLeftBtn3.style.display = 'none';
+            } else {
+                scrollLeftBtn3.style.display = 'flex';
+            }
+        });
+
+
+        document.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const targetSection = document.getElementById('trigger');
+        
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        const targetOffsetTop = targetSection.offsetTop;
+
+        if (scrollPosition >= targetOffsetTop) {
+            navbar.style.height = '8rem';
+            navbar.style.position = 'fixed';
+            navbar.style.top = '0'; // Navbar mengikuti scroll
+            navbar.style.boxShadow = '0 3px 7px rgba(0, 0, 0, 0.2)';
+
+            
+
+            if (!navbar.classList.contains('expanded')) {
+            navbar.innerHTML += `
+            <div class="bagian-bawah mt-1 mb-3 min-[360px]:mb-5 w-[85%] flex justify-center items-center">
+                    <div class=" w-full min-[930px]:w-1/2 flex justify-start items-center">
+                
+                        <div class=" w-full min-[930px]:w-[70%] flex justify-start items-center text-lg py-[5px] min-[930px]:py-[3px] bg-[#EBF3F4] rounded-3xl">
+                            <i class="fa-solid fa-magnifying-glass ml-5 text-xl text-[#9CA3AF]"></i>
+                            <input type="text" class="pl-[20px] py-[5px] text-sm min-[360px]:text-base w-[80%] bg-[#EBF3F4] focus:outline-none "
+                            placeholder="Search "/>
+                        </div>
+                       
+                    </div>
+    
+                    <div class="w-1/2 hidden min-[930px]:flex justify-end items-center">
+                        <ul class="flex gap-5  montserrat font-medium text-[15px]">
+                            <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="#">Pesawat</a>
+                            </li>
+                            <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="#">Hotel</a></li>
+                            <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="#">Vila & Apt.</a></li>
+                            <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="#">Kereta</a>
+                            </li>
+                            <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="#">Lainya</a></li>
+                        </ul>
+                    </div>
+                
+                </div>
+            `;
+            navbar.classList.add('expanded');
+            initializeMenuButton();
+            }
+             // Menambahkan shadow
+        } else {
+            navbar.style.height = '7rem';
+            navbar.style.position = 'static'; // Navbar kembali ke posisi awal
+            navbar.style.boxShadow = 'none'; // Menghapus shadow
+
+            if (navbar.classList.contains('expanded'))
+             {
+            navbar.innerHTML = `
+            <nav id="navbar" class="navbar w-full z-50 transition-transform duration-300 h-28 flex flex-col justify-center items-center mx-auto bg-white">
+        <div class="w-[85%] bg-white">
+            <div class="flex items-center justify-between">
+                <!-- Mobile menu button (moved to the left side of the logo) -->
+                <div class="flex min-[930px]:hidden order-1">
+                    <button id="menu-button" class="focus:outline-none">
+                        <i class="fa-solid fa-bars text-[20px]"></i>
+                    </button>
+                </div>
+                
+                <!-- Logo -->
+                <div class="logo flex flex-row order-2 mx-auto min-[930px]:mr-4">
+                    <img class="w-40 min-[930px]:w-52" src="Asset/logoIndozons.png" alt="Logo Indozons">
+                </div>
+                
+                <!-- Profile Icon (moved to the right side of the logo) -->
+                <div class="flex order-3 min-[930px]:order-none min-[930px]:hidden">
+                    <i class="ph ph-user-circle text-center text-[35px] 2xl:text-[41px] min-[930px]:ml-5"></i>
+                </div>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden min-[930px]:flex flex-row w-full items-center justify-end order-4">
+                    <ul class="flex gap-4 sm:gap-8 mr-4 sm:mr-12 pt-1 montserrat font-medium text-[13px] sm:text-[15px]">
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#destin">Destination</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#article">Tips</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#review">Review</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Bookings</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Saved</a></li>
+                    </ul>
+                    <button class="internasional flex items-center">
+                        <i class="fa-solid fa-globe text-[19px] xl:text-[20px] flex pr-2"></i>
+                        <div class="border-l-2 border-[#171717] h-5 xl:h-7"></div>
+                        <p class="font-medium text-base xl:text-xl pl-2">IDR</p>
+                    </button>
+                    <i class="ph ph-user-circle text-center text-[35px] 2xl:text-[41px] ml-5"></i>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden min-[930px]:hidden absolute top-0 left-0 w-full bg-white z-50 shadow-lg mt-2">
+                <ul class="flex flex-col gap-5 mb-5 montserrat font-medium text-[15px] pl-10 p-4">
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#destin">Destination</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#article">Tips</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#review">Review</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Bookings</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Saved</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            `;
+            navbar.classList.remove('expanded');
+            initializeMenuButton();
+        }
+      
+            
+        }
+        });
+
+        
+
+
+
+
+
+
+        
+    const buttonSelesai = document.getElementById('selesai');
+    const dropdownMenu1 = document.getElementById('dropdownMenuBottom');
+
+        function toggleDropdown(menuId) {
+            const dropdownMenu = document
+            .getElementById(menuId);
+            dropdownMenu.classList.toggle('hidden');
+        }
+
+        buttonSelesai.addEventListener('click', () => {
+            dropdownMenu1.classList.toggle('hidden');
+        });
+        const numberInput = document.getElementById('numberInput');
+        const incrementBtn = document.getElementById('incrementBtn');
+        const decrementBtn = document.getElementById('decrementBtn');
+        const numberInput2 = document.getElementById('numberInput2');
+        const incrementBtn2 = document.getElementById('incrementBtn2');
+        const decrementBtn2 = document.getElementById('decrementBtn2');
+        const numberInput3 = document.getElementById('numberInput3');
+        const incrementBtn3 = document.getElementById('incrementBtn3');
+        const decrementBtn3 = document.getElementById('decrementBtn3');
+
+        incrementBtn.addEventListener('click', () => {
+            numberInput.value = parseInt(numberInput.value) + 1;
+        });
+
+        decrementBtn.addEventListener('click', () => {
+            numberInput.value = parseInt(numberInput.value) - 1;
+        });
+
+        incrementBtn2.addEventListener('click', () => {
+            numberInput2.value = parseInt(numberInput2.value) + 1;
+        });
+
+        decrementBtn2.addEventListener('click', () => {
+            numberInput2.value = parseInt(numberInput2.value) - 1;
+        });
+
+        incrementBtn3.addEventListener('click', () => {
+            numberInput3.value = parseInt(numberInput3.value) + 1;
+        });
+
+        decrementBtn3.addEventListener('click', () => {
+            numberInput3.value = parseInt(numberInput3.value) - 1;
+        });
+
+
+      
+
+
+    </script>
+
+
+</body>
+
+</html>

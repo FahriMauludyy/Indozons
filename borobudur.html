@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="Asset/loggo.png" \type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Indozons</title>
+    <style>
+        .montserrat {
+            font-family: Montserrat;
+        }
+
+        .baloo {
+            font-family: 'Baloo Bhai 2';
+        }
+
+        .work-sans {
+            font-family: 'Work Sans';
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .active {
+            background-color: #236975;
+            color: white;
+            border: none;
+        }
+
+        .pilihan-kendaraan button {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+
+        .image-pembuka {
+            background-image: url('Asset/foto2.png');
+        }
+
+        .gambar1 {
+            background-image: url('Asset/gambar1.png');
+        }
+
+        .gambar2 {
+            background-image: url('Asset/gambar2.png');
+        }
+
+        .gambar3 {
+            background-image: url('Asset/gambar3.png');
+        }
+
+        .gambar4 {
+            background-image: url('Asset/gambar4.png');
+        }
+
+        .gambar5 {
+            background-image: url('Asset/gambar5.png');
+        }
+
+        .gambar6 {
+            background-image: url("Asset/gambar6.png");
+        }
+
+        .gambar7 {
+            background-image: url("Asset/gambar7.png");
+        }
+
+        .gambar8 {
+            background-image: url("Asset/gambar8.png");
+        }
+
+        .gambar9 {
+            background-image: url("Asset/gambar9.png");
+        }
+
+        .gambar10 {
+            background-image: url("Asset/gambar10.png");
+        }
+
+        .gambar11 {
+            background-image: url("Asset/gambar11.png");
+        }
+
+        .gambar12 {
+            background-image: url("Asset/gambar12.png");
+        }
+
+        .gambar16 {
+            background-image: url("Asset/gambar16.png");
+        }
+
+        .gambar25 {
+            background-image: url("Asset/gambar25.png");
+        }
+
+        .gambar30 {
+            background-image: url("Asset/gambar42.png");
+        }
+
+        .gambar31 {
+            background-image: url("Asset/gambar43.png");
+        }
+
+        .gambar32 {
+            background-image: url("Asset/gambar44.png");
+        }
+
+        .gambar33 {
+            background-image: url("Asset/gambar45.png");
+        }
+    </style>
+</head>
+
+<body class="work-sans overflow-x-hidden ">
+
+    <nav id="navbar" class="navbar w-full z-50 h-28 flex flex-col justify-center items-center mx-auto bg-white">
+        <div class="w-[85%] bg-white">
+            <div class="flex items-center mt-5 justify-between">
+                <!-- Mobile menu button (moved to the left side of the logo) -->
+                <div class="flex min-[930px]:hidden order-1">
+                    <button id="menu-button" class="focus:outline-none">
+                        <i class="fa-solid fa-bars text-[20px]"></i>
+                    </button>
+                </div>
+
+                <!-- Logo -->
+                <a href="index.html" class="logo flex flex-row order-2 mx-auto min-[930px]:mr-4">
+                    <img class="w-40 min-[930px]:w-52" src="Asset/logoIndozons.png" alt="Logo Indozons">
+                </a>
+
+                <!-- Profile Icon (moved to the right side of the logo) -->
+                <div class="flex order-3 min-[930px]:order-none min-[930px]:hidden">
+                    <i class="ph ph-user-circle text-center text-[35px] 2xl:text-[41px] min-[930px]:ml-5"></i>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden min-[930px]:flex flex-row w-full items-center justify-end order-4">
+                    <ul
+                        class="flex gap-4 sm:gap-8 mr-4 sm:mr-12 pt-1 montserrat font-medium text-[13px] sm:text-[15px]">
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]"
+                                href="#">Destination</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]"
+                                href="#">Tips</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]"
+                                href="#">Review</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]"
+                                href="#">Bookings</a></li>
+                        <li><a class="text-[15px] xl:text-[17px] font-semibold hover:text-[#236975] text-[#171717]"
+                                href="#">Saved</a></li>
+                    </ul>
+                    <button class="internasional flex items-center">
+                        <i class="fa-solid fa-globe text-[19px] xl:text-[20px] flex pr-2"></i>
+                        <div class="border-l-2 border-[#171717] h-5 xl:h-7"></div>
+                        <p class="font-medium text-base xl:text-xl pl-2">IDR</p>
+                    </button>
+                    <i class="ph ph-user-circle text-center text-[35px] 2xl:text-[41px] ml-5"></i>
+                </div>
+            </div>
+            <div class="bagian-bawah mt-3 mb-3 min-[360px]:mb-5 w-full flex justify-center items-center">
+
+                <div class="w-full hidden min-[930px]:flex justify-end items-center">
+                    <ul class="flex gap-5  montserrat font-medium text-[15px]">
+                        <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="index.html">Pesawat</a>
+                        </li>
+                        <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="index.html">Hotel</a>
+                        </li>
+                        <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="index.html">Vila &
+                                Apt.</a></li>
+                        <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="index.html">Kereta</a>
+                        </li>
+                        <li><a class="text-[16px] font-medium hover:text-[#236975] text-[#171717]" href="index.html">Lainya</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu"
+                class="hidden min-[930px]:hidden absolute top-0 left-0 w-full bg-white z-50 shadow-lg mt-2">
+                <ul class="flex flex-col gap-5 mb-5 montserrat font-medium text-[15px] pl-10 p-4">
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]"
+                            href="#">Destination</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Tips</a></li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Review</a>
+                    </li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Bookings</a>
+                    </li>
+                    <li><a class="text-[17px] font-semibold hover:text-[#236975] text-[#171717]" href="#">Saved</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="hero flex justify-center items-center flex-col">
+        <div class="homepage w-[75%]  | flex flex-col justify-center items-center">
+            <div class=" button-search w-full min-[600px]:w-[85%] mt-2 mb-8  flex justify-center items-center">
+                <div
+                    class=" w-full  flex justify-start items-center text-lg py-[5px] min-[930px]:py-[3px] bg-[#EBF3F4] rounded-3xl">
+                    <i class="fa-solid fa-magnifying-glass ml-5 text-lg min-[500px]:text-xl text-[#9CA3AF]"></i>
+                    <input type="text"
+                        class="pl-[20px] py-[10px] text-[13px] min-[420px]:text-xs min-[500px]:text-sm min-[600px]:text-[15px] min-[785px]:text-lg w-[80%] bg-[#EBF3F4] focus:outline-none "
+                        placeholder="Any ideas on what to do for you next trip? " />
+                </div>
+
+            </div>
+            <div class="gambar-page w-[100%] flex  flex-col min-[600px]:flex-row ">
+                <div class="container w-full min-[600px]:hidden overflow-x-auto flex whitespace-nowrap ">
+                    <div class="card-destination-up gap-8 flex font-semibold text-white">
+                        <div
+                            class="card1 w-[240px] min-[410px]:w-[300px] min-[540px]:w-[400px] h-[240px] min-[410px]:h-[300px] min-[540px]:h-[345px] rounded-2xl gambar5 bg-cover flex items-end justify-start">
+                        </div>
+                        <div
+                            class="card2 w-[240px] min-[410px]:w-[300px] min-[540px]:w-[400px] h-[240px] min-[410px]:h-[300px] min-[540px]:h-[345px] rounded-2xl gambar30 bg-cover flex items-end justify-start">
+                        </div>
+                        <div
+                            class="card3 w-[240px] min-[410px]:w-[300px] min-[540px]:w-[400px] h-[240px] min-[410px]:h-[300px] min-[540px]:h-[345px] rounded-2xl gambar31 bg-cover flex items-end justify-start">
+                        </div>
+                        <div
+                            class="card4 w-[240px] min-[410px]:w-[300px] min-[540px]:w-[400px] h-[240px] min-[410px]:h-[300px] min-[540px]:h-[345px] rounded-2xl gambar32 bg-cover flex items-end justify-start">
+                        </div>
+                        <div
+                            class="card5 w-[240px] min-[410px]:w-[300px] min-[540px]:w-[400px] h-[240px] min-[410px]:h-[300px] min-[540px]:h-[345px] rounded-2xl gambar33 bg-cover flex items-end justify-start">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="hidden min-[600px]:flex">
+                    <div
+                        class="bagian-kiri flex justify-start w-full mb-5 min-[600px]:mb-0 min-[600px]:w-1/2 mr-0 min-[600px]:mr-3 min-[730px]:mr-4 min-[1300px]:mr-6">
+                        <div class="card w-full  flex justify-start ">
+                            <img class=" w-full rounded-2xl" src="Asset/gambar5.png" alt="">
+                        </div>
+                    </div>
+                    <div class="bagian-kanan w-full min-[600px]:w-1/2 ">
+                        <div class="flex flex-col">
+                            <div class="bagian-atas mb-5 min-[600px]:mb-3 min-[730px]:mb-4 min-[1300px]:mb-7 flex">
+                                <div class="card w-full mr-5 min-[600px]:mr-3 min-[730px]:mr-4 min-[1300px]:mr-6 ">
+                                    <img class="w-full rounded-xl  min-[730px]:rounded-2xl " src="Asset/gambar42.png"
+                                        alt="">
+                                </div>
+                                <div class="card w-full">
+                                    <img class="w-full rounded-xl  min-[730px]:rounded-2xl" src="Asset/gambar43.png"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="bagian-bawah flex ">
+                                <div class="card w-full mr-5 min-[600px]:mr-3 min-[730px]:mr-4 min-[1300px]:mr-6">
+                                    <img class="w-full rounded-xl  min-[730px]:rounded-2xl" src="Asset/gambar44.png"
+                                        alt="">
+                                </div>
+                                <div class="card w-full">
+                                    <img class="w-full rounded-xl  min-[730px]:rounded-2xl" src="Asset/gambar45.png"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class=" heading-page flex flex-col min-[1000px]:flex-row mt-8 min-[600px]:mt-14 mb-12 ">
+                <div class="area-text w-full min-[1000px]:w-1/2 mb-8">
+                    <div class="heading mb-8">
+                        <h1 class=" text-4xl min-[530px]:text-5xl font-bold">Candi Borobudur</h1>
+                        <p class=" text-lg min-[530px]:text-xl font-regular mt-3">Kabupaten Magelang, Jawa Tengah</p>
+                    </div>
+                    <div class="pennjelasan text-sm min-[370px]:text-base w-full">
+                        <p class=" mb-5">
+                            Candi Borobudur adalah sebuah candi
+                            Buddha yang terletak di Borobudur, Magelang, Jawa Tengah, Indonesia. Candi ini terletak
+                            kurang lebih 100 km di sebelah barat daya Semarang, 86 km di sebelah barat Surakarta, dan 40
+                            km di sebelah barat laut Yogyakarta. Candi dengan banyak stupa ini didirikan oleh para
+                            penganut agama Buddha Mahayana sekitar tahun 800-an Masehi pada masa pemerintahan wangsa
+                            Syailendra. Borobudur adalah candi atau kuil Buddha terbesar di dunia,sekaligus salah
+                            satu monumen Buddha terbesar di dunia.
+                        </p>
+                        <p class="mb-5">
+                            Monumen ini terdiri atas enam teras berbentuk bujur sangkar yang di atasnya terdapat tiga
+                            pelataran melingkar, pada dindingnya dihiasi dengan 2.672 panel relief dan aslinya terdapat
+                            504 arca Buddha. Borobudur memiliki koleksi relief Buddha terlengkap dan terbanyak di
+                            dunia. Stupa utama terbesar terletak di tengah sekaligus memahkotai bangunan ini,
+                            dikelilingi oleh tiga barisan melingkar 72 stupa berlubang yang di dalamnya terdapat arca
+                            Buddha tengah duduk bersila dalam posisi teratai sempurna dengan mudra (sikap tangan)
+                            Dharmachakra mudra (memutar roda dharma).
+                        </p>
+                       
+
+
+                    </div>
+
+                </div>
+                <div
+                    class="area-button w-full min-[1000px]:w-1/2 flex flex-col justify-start items-center min-[1000px]:items-end">
+                    <div
+                        class="card1 bg-[#CFECF1] flex flex-col min-[430px]:flex-row mb-5 justify-center items-start min-[430px]:items-center rounded-xl h-32 min-[430px]:h-24 px-5  w-full min-[1000px]:w-[80%] ">
+                        <div class="kanan mr-3 min-[400px]:mr-0">
+                            <h1 class="text-xs min-[400px]:text-sm">Mulai dari</h1>
+                            <h1
+                                class=" text-xl min-[400px]:text-2xl min-[1200px]:text-3xl text-[#236975] font-semibold">
+                                Rp370.000</h1>
+                        </div>
+                        <div class="kiri w-full flex justify-start min-[430px]:justify-end pt-3 items-center">
+                            <button
+                                class="bg-[#236975] hover:bg-[#45838E] w-full min-[370px]:w-[95%] min-[415px]:w-[90%] min-[1310px]:w-[80%] h-10 min-[1000px]:h-12 rounded-3xl">
+                                <h1 class="text-white text-sm min-[1060px]:text-base font-semibold">Find Option</h1>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="card2  bg-[#CFECF1] text-[#236975] flex flex-col rounded-xl min-[1550px]:h-[675px] min-[1660px]:h-[650px] p-6 w-full min-[1000px]:w-[80%]">
+                        <div class="heading flex flex-row">
+                            <i class="ph ph-question text-lg min-[390px]:text-xl mr-3"></i>
+                            <h1 class="text-base min-[390px]:text-lg font-semibold">What You'll Experience</h1>
+                        </div>
+                        <ul class="w-full mt-5  font-medium text-sm min-[345px]:text-base">
+                            <li>&#8226;Kunjungi candi Buddha terbesar di dunia yang dibangun pada abad ke-8 masehi</li>
+                            <li class="my-3">&#8226;Naik ke puncak candi dan bersiap untuk kagum dengan arsitekturnya
+                                yang megah dengan biaya tambahan</li>
+                            <li>&#8226;Lihat dekorasi panel yang mengangkat gambaran kehidupan Buddha dan masyarakat
+                                Jawa kuno</li>
+                        </ul>
+
+                        <div class=" flex flex-col mt-8">
+                            <h1 class="text-lg font-semibold mb-5">Tour Itinerary</h1>
+                            <ul class=" w-full text-[15px] space-y-3">
+                                <li>07:15-07:30 Pick up at Hotel in Jogja City/Station area</li>
+                                <li>07:30-09:30 Towards Borobudur Temple</li>
+                                <li>09:30-12:00 Enjoying Borobudur Temple & Svargabhumi</li>
+                                <li>12:00-13:00 Lunch</li>
+                                <div class="hidden min-[1000px]:block space-y-3">
+                                    <li>13:00-14:00 Heading to Mudal River Park</li>
+                                    <li>14:00-15:30 Visiting Mudal River Park</li>
+                                </div>
+
+                            </ul>
+                            <div class="w-full flex justify-center mt-8">
+                                <button class="bg-[#236975] hover:bg-[#45838E] w-[70%] h-12 rounded-3xl">
+                                    <h1 class="text-white font-semibold">Read More</h1>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <hr id="trigger"
+                class="border-t-[2px] w-full min-[600px]:w-[93%] border-[#171717] mx-auto mt-4 mb-5 min-[1000px]:mb-10" />
+            <div class="rating-page w-full min-[600px]:w-[80%] flex justify-center items-center flex-col mb-20 mt-5">
+                <div class="ratings w-full mb-16 flex flex-col min-[1000px]:flex-row">
+                    <div class="bagian-kiri w-full min-[1000px]:w-1/2 mb-10 min-[1000px]:mb-0 mr-0 min-[1000px]:mr-24">
+                        <h1
+                            class="font-semibold  w-full text-xl min-[430px]:text-2xl min-[1000px]:text-xl min-[1170px]:text-2xl ">
+                            Ratings & Review</h1>
+                        <h1 class="font-bold text-7xl min-[580px]:text-8xl mt-4 ">9.5</h1>
+                        <img class=" w-[35%] min-[515px]:w-[25%] min-[1000px]:w-[65%] mb-4" src="Asset/icon15.png"
+                            alt="">
+                        <h1 class="font-medium text-base min-[430px]:text-lg">From 430 reviews</h1>
+                    </div>
+                    <div class="bagian-kanan w-full space-y-5 flex flex-col">
+                        <div class="rating1  w-full flex justify-start items-center ">
+                            <p class="text-xl font-medium mr-3">1</p>
+                            <img class="w-4 h-4 mr-4" src="Asset/icon32.png" alt="">
+                            <div class="value w-full h-5 bg-gray-400 rounded-full">
+                                <div class="value-dalam w-[93%] h-5 rounded-full bg-[#236975]">
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="rating2 w-full flex justify-start items-center ">
+                            <p class="text-xl font-medium mr-2">2</p>
+                            <img class="w-4 h-4 mr-4" src="Asset/icon32.png" alt="">
+                            <div class="value w-full h-5 bg-gray-400 rounded-full">
+                                <div class="value-dalam w-[80%] h-5 rounded-full bg-[#236975]">
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="rating3 w-full flex justify-start items-center ">
+                            <p class="text-xl font-medium mr-2">3</p>
+                            <img class="w-4 h-4 mr-4" src="Asset/icon32.png" alt="">
+                            <div class="value w-full h-5 bg-gray-400 rounded-full">
+                                <div class="value-dalam w-[35%] h-5 rounded-full bg-[#236975]">
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="rating4 w-full flex justify-start items-center ">
+                            <p class="text-xl font-medium mr-2">4</p>
+                            <img class="w-4 h-4 mr-4" src="Asset/icon32.png" alt="">
+                            <div class="value w-full h-5 bg-gray-400 rounded-full">
+                                <div class="value-dalam w-[13%] h-5 rounded-full bg-[#236975]">
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="rating5 w-full flex justify-start items-center ">
+                            <p class="text-xl font-medium mr-2">5</p>
+                            <img class="w-4 h-4 mr-4" src="Asset/icon32.png" alt="">
+                            <div class="value w-full h-5 bg-gray-400 rounded-full">
+                                <div class="value-dalam w-[8%] h-5 rounded-full bg-[#236975]">
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="container overflow-x-auto flex min-[780px]:block gap-5 min-[780px]:gap-0">
+                    <div
+                        class="komentar1 w-full mb-8 flex flex-col min-[1000px]:flex-row border rounded-2xl border-[#171717] pl-5 p-5 min-[780px]:pl-10 min-[780px]:p-6">
+                        <div
+                            class="bagian-kiri mb-5 min-[1000px]:mb-0 flex items-start mr- w-full3 min-[780px]:w-[50%] min-[1115px]:w-[40%]">
+                            <img class="w-16 h-16 mr-4" src="Asset/icon27.png" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="  text-base min-[1315px]:text-lg font-semibold">Marina Joe</h1>
+                                <p>Traveler</p>
+                            </div>
+                        </div>
+                        <div class="bagian-kanan w-full flex flex-col">
+                            <div class="flex flex-col min-[440px]:flex-row mb-0 min-[1000px]:mb-3">
+                                <div
+                                    class="rating w-[100px] h-8 rounded-3xl flex justify-center bg-[#E9FBFF] mb-3 flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">10.0/10</h1>
+                                </div>
+                                <h1 class=" ml-0 min-[440px]:ml-3 text-[15px] min-[640px]:text-base pt-1 font-semibold">
+                                    Reviewed 1 week(s) ago</h1>
+                            </div>
+                            <h1
+                                class=" text-sm min-[640px]:text-base w-[200px] min-[365px]:w-[250px] min-[440px]:w-[300px] min-[640px]:w-[350px] min-[730px]:w-[400px] min-[780px]:w-full">
+                                A veryy great experience with mas Elias and team!
+                                One day tour that covers all the glimps and experiences in Labuan Bajo✨ they also have
+                                sunset
+                                trip though we cannot join due to our flight schedule sadd. Obviously will join another
+                                trip in
+                                the future💞
+
+                            </h1>
+
+                        </div>
+
+                    </div>
+                    <div
+                        class="komentar2 w-full mb-8 flex flex-col min-[1000px]:flex-row border rounded-2xl border-[#171717] pl-5 p-5 min-[780px]:pl-10 min-[780px]:p-6">
+                        <div
+                            class="bagian-kiri mb-5 min-[1000px]:mb-0 flex items-start mr- w-full3 min-[780px]:w-[50%] min-[1115px]:w-[40%]">
+                            <img class="w-16 h-16 mr-4" src="Asset/icon30.png" alt="">
+                            <div class="flex flex-col">
+                                <h1 class=" text-base min-[1315px]:text-lg font-semibold">Naufal Azriel</h1>
+                                <p>Traveler</p>
+                            </div>
+                        </div>
+                        <div class="bagian-kanan w-full flex flex-col">
+                            <div class="flex flex-col min-[440px]:flex-row mb-0 min-[1000px]:mb-3">
+                                <div
+                                    class="rating w-[100px] h-8 rounded-3xl flex justify-center bg-[#E9FBFF] mb-3 flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">8.0/10</h1>
+                                </div>
+                                <h1 class=" ml-0 min-[440px]:ml-3 text-[15px] min-[640px]:text-base pt-1 font-semibold">
+                                    Reviewed 7 week(s) ago</h1>
+                            </div>
+                            <h1
+                                class=" text-sm min-[640px]:text-base w-[200px] min-[365px]:w-[250px] min-[440px]:w-[300px] min-[640px]:w-[350px] min-[730px]:w-[400px] min-[780px]:w-full">
+                                good service, friendly people, highly recommended
+                            </h1>
+
+
+
+                        </div>
+
+                    </div>
+                    <div
+                        class="komentar3 w-full mb-8 flex flex-col min-[1000px]:flex-row border rounded-2xl border-[#171717] pl-5 p-5 min-[780px]:pl-10 min-[780px]:p-6">
+                        <div
+                            class="bagian-kiri mb-5 min-[1000px]:mb-0 flex items-start mr-3 w-full  min-[780px]:w-[50%] min-[1115px]:w-[40%]">
+                            <img class="w-16 h-16 mr-4" src="Asset/icon29.png" alt="">
+                            <div class="flex flex-col">
+                                <h1 class=" text-base min-[1315px]:text-lg font-semibold">Emma Stone</h1>
+                                <p>Traveler</p>
+                            </div>
+                        </div>
+                        <div class="bagian-kanan w-full flex flex-col">
+                            <div class="flex flex-col min-[440px]:flex-row  mb-0 min-[1000px]:mb-3">
+                                <div
+                                    class="rating w-[100px] h-8 rounded-3xl flex justify-center bg-[#E9FBFF] mb-3 flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">10.0/10</h1>
+                                </div>
+                                <h1 class=" ml-0 min-[440px]:ml-3 text-[15px] min-[640px]:text-base pt-1 font-semibold">
+                                    Reviewed 9 week(s) ago</h1>
+                            </div>
+                            <h1
+                                class=" text-sm min-[640px]:text-base w-[200px] min-[365px]:w-[250px] min-[440px]:w-[300px] min-[640px]:w-[350px] min-[730px]:w-[400px] min-[780px]:w-full">
+                                all good, maybe it would be better to provide a GoPro camera for diving activities at
+                                Manta Point so that the documentation is even better
+                            </h1>
+
+
+
+                        </div>
+
+                    </div>
+                    <div
+                        class="komentar4 w-full mb-8 flex flex-col min-[1000px]:flex-row border rounded-2xl border-[#171717] pl-5 p-5 min-[780px]:pl-10 min-[780px]:p-6">
+                        <div
+                            class="bagian-kiri mb-5 min-[1000px]:mb-0 flex items-start mr-3 w-full  min-[780px]:w-[50%] min-[1115px]:w-[40%]">
+                            <img class="w-16 h-16 mr-4" src="Asset/icon31.png" alt="">
+                            <div class="flex flex-col">
+                                <h1 class=" text-base min-[1315px]:text-lg font-semibold">Fahri Mauludy</h1>
+                                <p>Traveler</p>
+                            </div>
+                        </div>
+                        <div class="bagian-kanan w-full flex flex-col">
+                            <div class="flex flex-col min-[440px]:flex-row mb-0 min-[1000px]:mb-3">
+                                <div
+                                    class="rating w-[100px] h-8 rounded-3xl flex justify-center bg-[#E9FBFF] mb-3 flex-row items-center">
+                                    <img class="w-4 h-auto" src="Asset/icon16.png" alt="">
+                                    <h1 class="font-medium ml-2 text-[#236975]">10.0/10</h1>
+                                </div>
+                                <h1 class=" ml-0 min-[440px]:ml-3 text-[15px] min-[640px]:text-base pt-1 font-semibold">
+                                    Reviewed 5 week(s) ago</h1>
+                            </div>
+                            <h1
+                                class=" text-sm min-[640px]:text-base w-[200px] min-[365px]:w-[250px] min-[440px]:w-[300px] min-[640px]:w-[350px] min-[730px]:w-[400px] min-[780px]:w-full">
+                                It's really perfect. Best. The guide was good and helped us when snorkeling and gave
+                                good information about the places we visited 👍🏼👍🏼👍🏼👍🏼
+                            </h1>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bagian-button w-full flex justify-center items-center mt-8 min-[800px]:mt-6">
+                    <button class="bg-[#236975] hover:bg-[#45838E] rounded-3xl w-64 h-12">
+                        <p class="font-medium text-white text-base min-[800px]:text-lg">See More</p>
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="location-page flex flex-col  w-full ">
+                <h1 class="text-2xl min-[460px]:text-3xl min-[780px]:text-4xl font-semibold ">Location Details</h1>
+                <div class="text-location flex items-center mt-8">
+                    <i class="ph ph-map-pin-area text-2xl min-[550px]:text-4xl  mr-5"></i>
+                    <h1 class="font-medium text-base min-[485px]:text-lg min-[560px]:text-xl min-[700px]:text-2xl">Jl. Badrawati, Kw. Candi Borobudur, Borobudur, Kec. Borobudur, Kabupaten Magelang, Jawa Tengah</h1>
+                </div>
+                <div class="maps w-full mt-5">
+                    <iframe  class="w-full rounded-2xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7909.404802717543!2d110.20143954131784!3d-7.607327919630929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cf009a7d697%3A0xdd34334744dc3cb!2sCandi%20Borobudur!5e0!3m2!1sid!2sid!4v1725619173357!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+            <div
+                class="footer w-screen h-[500px] min-[1000px]:h-[650px] bg-[#236975] text-white mt-16 md:mt-20 min-[950px]:mt-28 | flex flex-col justify-center items-center">
+                <div class="w-[75%] flex flex-col min-[1000px]:flex-row  min-[1000px]:mt-16">
+                    <div class="bagian-kiri w-full min-[1000px]:w-[45%]">
+                        <div class="bagian-text w-full">
+                            <div
+                                class="flex  items-start min-[1000px]:items-start flex-col min-[565px]:flex-row min-[1000px]:flex-col mb-0 min-[565px]:mb-10 md:mb-8 min-[1000px]:mb-0">
+                                <div class="kalimat1 w-full">
+                                    <h1 class="baloo text-4xl md:text-5xl font-bold">Indozons</h1>
+                                    <p class="text-sm md:text-base">For Explore Everywhere</p>
+                                </div>
+                                <div class="icon-section my-8 min-[565px]:my-0 min-[1000px]:my-16">
+                                    <h1 class="font-semibold text-xl md:text-2xl mb-3">Follow us</h1>
+                                    <div class="iconArea flex  gap-3 text-xl md:text-xl lg:text-2xl">
+                                        <div
+                                            class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                            <a href="https://www.instagram.com/fahrimauludy/"
+                                                class="fa-brands fa-instagram text-[#236975] hover:text-[#c2c2ab]"></a>
+                                        </div>
+                                        <div
+                                            class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                            <a href="https://www.instagram.com/fahrimauludy/"
+                                                class="fa-brands fa-facebook text-[#236975] hover:text-[#c2c2ab]"></a>
+                                        </div>
+                                        <div
+                                            class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                            <a href="https://www.instagram.com/fahrimauludy/"
+                                                class="fa-brands fa-youtube text-[#236975] hover:text-[#c2c2ab]"></a>
+                                        </div>
+                                        <div
+                                            class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                            <a href="https://www.instagram.com/fahrimauludy/"
+                                                class="fa-brands fa-tiktok text-[#236975] hover:text-[#c2c2ab]"></a>
+                                        </div>
+                                        <div
+                                            class="card bg-white rounded-full w-[36px] h-[36px] md:w-[43px] md:h-[43px] flex justify-center items-center">
+                                            <a href="https://www.instagram.com/fahrimauludy/"
+                                                class="fa-brands fa-twitter text-[#236975] hover:text-[#c2c2ab]"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="email-section mb-8 min-[1000px]:mb-0">
+                                <p class="font-semibold text-lg md:text-xl min-[1000px]:text-lg xl:text-xl ">Get travel
+                                    recommendations <br> from us</p>
+                                <div class="email-sent flex flex-col">
+                                    <input
+                                        class=" mt-5 w-full  text-[#171717] focus:outline-none h-12 rounded-3xl pl-5 p-3"
+                                        type="text" placeholder="Email Address">
+                                    <button class="bg-[#CFECF1] hover:bg-[#BEDCE6] rounded-full w-full  h-12 mt-2">
+                                        <p class="font-semibold text-[#236975] text-base min-[400px]:text-lg">Subscribe
+                                            Now</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bagian-kanan w-full ml-0 min-[1000px]:ml-14 min-[1615px]:ml-0 gap-28 min-[1000px]:gap-10 min-[1275px]:gap-16 min-[1470px]:gap-24 min-[1600px]:gap-32 hidden min-[1000px]:flex justify-center flex-row">
+                        <div class="list-1">
+                            <h1 class="text-xl font-semibold">About us</h1>
+                            <ul class="mt-5 text-sm min-[1085px]:text-base space-y-3">
+                                <li><a href="#">About Indozons</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">New Release Features</a></li>
+                            </ul>
+                        </div>
+                        <div class="list-2">
+                            <h1 class="text-xl font-semibold">Product</h1>
+                            <ul class="mt-5 text-sm min-[1085px]:text-base space-y-3">
+                                <li><a href="#">Hotels</a></li>
+                                <li><a href="#">Flights</a></li>
+                                <li><a href="#">Trains</a></li>
+                                <li><a href="#">Airport & Transfer</a></li>
+                                <li><a href="#">Car Rental</a></li>
+                                <li><a href="#">Villas</a></li>
+                                <li><a href="#">Taxi</a></li>
+                                <li><a href="#">Apartements</a></li>
+                                <li><a href="#">PayLater</a></li>
+                                <li><a href="#">Gift Voucher</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="list-3">
+                            <h1 class="text-xl font-semibold">Destination</h1>
+                            <div class="flex flex-row">
+                                <ul class="mt-5 mr-10 text-sm min-[1085px]:text-base space-y-3">
+                                    <li><a href="#">Jakarta</a></li>
+                                    <li><a href="#">Bali</a></li>
+                                    <li><a href="#">Yogyakarta</a></li>
+                                    <li><a href="#">Lombok</a></li>
+                                    <li><a href="#">Padang</a></li>
+                                    <li><a href="#">Surabaya</a></li>
+                                    <li><a href="#">Palembang</a></li>
+                                    <li><a href="#">Aceh</a></li>
+                                    <li><a href="#">Jayapura</a></li>
+                                    <li><a href="#">Pekanbaru</a></li>
+                                    <li><a href="#">Kupang</a></li>
+                                </ul>
+                                <ul class="mt-5 text-sm min-[1085px]:text-base space-y-3">
+                                    <li><a href="#">Bandung</a></li>
+                                    <li><a href="#">Malang</a></li>
+                                    <li><a href="#">Batam</a></li>
+                                    <li><a href="#">Solo</a></li>
+                                    <li><a href="#">Bogor</a></li>
+                                    <li><a href="#">Makassar</a></li>
+                                    <li><a href="#">Semarang</a></li>
+                                    <li><a href="#">Manado</a></li>
+                                    <li><a href="#">Jambi</a></li>
+                                    <li><a href="#">Balikpapan</a></li>
+                                    <li><a href="#">Tanggerang</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="text-copyright mt-1 min-[565px]:mt-5 min-[1000px]:mt-12">
+                    <h1 class="text-sm">© 2024 Indozons. All Rights Reserved.</h1>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    </div>
+
+    <script>
+        function initializeMenuButton() {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target) && !mobileMenu
+                    .classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+
+        initializeMenuButton();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let activeButton = document.querySelector('.pilihan-kendaraan button.active');
+
+            if (!activeButton) {
+                // Jika tidak ada tombol yang aktif, jadikan "Hotels" sebagai default
+                activeButton = document.querySelector('.pilihan-kendaraan button[data-item="item1"]');
+                activeButton.classList.add('active');
+                document.getElementById('item1').classList.remove('hidden');
+            }
+
+            document.querySelectorAll('.pilihan-kendaraan button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const itemId = button.getAttribute('data-item');
+
+                    // Mengganti konten card-aksi
+                    document.querySelectorAll('.card-aksi .content').forEach(content => {
+                        content.classList.add('hidden');
+                    });
+
+                    const selectedContent = document.getElementById(itemId);
+                    if (selectedContent) {
+                        selectedContent.classList.remove('hidden');
+                    }
+
+                    // Mengubah warna tombol yang aktif
+                    if (activeButton) {
+                        activeButton.classList.remove('active');
+                    }
+                    button.classList.add('active');
+                    activeButton = button;
+                });
+            });
+        });
+
+        const toggleBtn1 = document.getElementById('toggleBtn1');
+        const card1 = document.querySelector('.card1');
+
+        toggleBtn1.addEventListener('click', () => {
+            if (card1.classList.contains('max-h-52')) {
+                card1.classList.remove('max-h-52');
+                card1.classList.add('max-h-full');
+                toggleBtn1.textContent = 'Read Less';
+            } else {
+                card1.classList.remove('max-h-full');
+                card1.classList.add('max-h-52');
+                toggleBtn1.textContent = 'Read More';
+            }
+        });
+
+
+
+
+        //page destination
+        const scrollLeftBtn = document.getElementById('scrollLeft');
+        const scrollRightBtn = document.getElementById('scrollRight');
+        const scrollContainer = document.getElementById('scrollContainer');
+
+        // Initially hide the left scroll button
+        scrollLeftBtn.style.display = 'none';
+
+        scrollRightBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: 322,
+                behavior: 'smooth'
+            });
+
+            // Show the left button when right button is clicked
+            scrollLeftBtn.style.display = 'flex';
+        });
+
+        scrollLeftBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: -322,
+                behavior: 'smooth'
+            });
+
+            // Hide the left button if scrolled back to the start
+            if (scrollContainer.scrollLeft === 0) {
+                scrollLeftBtn.style.display = 'none';
+            }
+        });
+
+        scrollContainer.addEventListener('scroll', () => {
+            // Hide the left button if at the start of the scroll container
+            if (scrollContainer.scrollLeft === 0) {
+                scrollLeftBtn.style.display = 'none';
+            } else {
+                scrollLeftBtn.style.display = 'flex';
+            }
+        });
+
+
+        // page villa
+
+        const scrollLeftBtn2 = document.getElementById('scrollLeft2');
+        const scrollRightBtn2 = document.getElementById('scrollRight2');
+        const scrollContainer2 = document.getElementById('scrollContainer2');
+
+        scrollLeftBtn2.style.display = 'none';
+
+        scrollRightBtn2.addEventListener('click', () => {
+            scrollContainer2.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+
+            // Show the left button when right button is clicked
+            scrollLeftBtn2.style.display = 'flex';
+        });
+
+        scrollLeftBtn2.addEventListener('click', () => {
+            scrollContainer2.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+
+            // Hide the left button if scrolled back to the start
+            if (scrollContainer2.scrollLeft === 0) {
+                scrollLeftBtn2.style.display = 'none';
+            }
+        });
+
+        scrollContainer2.addEventListener('scroll', () => {
+            // Hide the left button if at the start of the scroll container
+            if (scrollContainer2.scrollLeft === 0) {
+                scrollLeftBtn2.style.display = 'none';
+            } else {
+                scrollLeftBtn2.style.display = 'flex';
+            }
+        });
+
+        const scrollLeftBtn3 = document.getElementById('scrollLeft3');
+        const scrollRightBtn3 = document.getElementById('scrollRight3');
+        const scrollContainer3 = document.getElementById('scrollContainer3');
+
+        scrollLeftBtn3.style.display = 'none';
+
+        scrollRightBtn3.addEventListener('click', () => {
+            scrollContainer3.scrollBy({
+                left: 322,
+                behavior: 'smooth'
+            });
+
+            // Show the left button when right button is clicked
+            scrollLeftBtn3.style.display = 'flex';
+        });
+
+        scrollLeftBtn3.addEventListener('click', () => {
+            scrollContainer3.scrollBy({
+                left: -322,
+                behavior: 'smooth'
+            });
+
+            // Hide the left button if scrolled back to the start
+            if (scrollContainer3.scrollLeft === 0) {
+                scrollLeftBtn3.style.display = 'none';
+            }
+        });
+
+        scrollContainer3.addEventListener('scroll', () => {
+            // Hide the left button if at the start of the scroll container
+            if (scrollContainer3.scrollLeft === 0) {
+                scrollLeftBtn3.style.display = 'none';
+            } else {
+                scrollLeftBtn3.style.display = 'flex';
+            }
+        });
+
+
+
+
+
+
+        const buttonSelesai = document.getElementById('selesai');
+        const dropdownMenu1 = document.getElementById('dropdownMenuBottom');
+
+        function toggleDropdown(menuId) {
+            const dropdownMenu = document
+                .getElementById(menuId);
+            dropdownMenu.classList.toggle('hidden');
+        }
+
+        buttonSelesai.addEventListener('click', () => {
+            dropdownMenu1.classList.toggle('hidden');
+        });
+        const numberInput = document.getElementById('numberInput');
+        const incrementBtn = document.getElementById('incrementBtn');
+        const decrementBtn = document.getElementById('decrementBtn');
+        const numberInput2 = document.getElementById('numberInput2');
+        const incrementBtn2 = document.getElementById('incrementBtn2');
+        const decrementBtn2 = document.getElementById('decrementBtn2');
+        const numberInput3 = document.getElementById('numberInput3');
+        const incrementBtn3 = document.getElementById('incrementBtn3');
+        const decrementBtn3 = document.getElementById('decrementBtn3');
+
+        incrementBtn.addEventListener('click', () => {
+            numberInput.value = parseInt(numberInput.value) + 1;
+        });
+
+        decrementBtn.addEventListener('click', () => {
+            numberInput.value = parseInt(numberInput.value) - 1;
+        });
+
+        incrementBtn2.addEventListener('click', () => {
+            numberInput2.value = parseInt(numberInput2.value) + 1;
+        });
+
+        decrementBtn2.addEventListener('click', () => {
+            numberInput2.value = parseInt(numberInput2.value) - 1;
+        });
+
+        incrementBtn3.addEventListener('click', () => {
+            numberInput3.value = parseInt(numberInput3.value) + 1;
+        });
+
+        decrementBtn3.addEventListener('click', () => {
+            numberInput3.value = parseInt(numberInput3.value) - 1;
+        });
+    </script>
+
+
+</body>
+
+</html>
